@@ -22,3 +22,4 @@ position = Vector2( 695, 729 )
 scale = Vector2( 8.76, 1 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
+max_ram = 5000

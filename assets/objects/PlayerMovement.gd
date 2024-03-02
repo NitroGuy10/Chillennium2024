@@ -4,6 +4,7 @@ var jumpvelocity = 600.0
 var walkspeed = 100.0
 var horizontal_damping = 0.8
 var gravityscale = 1600.0
+var ram_use_speed = 1000
 
 var velocity = Vector2()
 
@@ -19,6 +20,8 @@ func _ready():
 
 func _physics_process(delta):
 
+	if Input.is_action_pressed("ui_select"):
+		get_parent().get_parent().get_node("GameCamera/Meter").ram_used += ram_use_speed * delta
 	
 		
 	if !Input.is_action_pressed("ui_select"):
