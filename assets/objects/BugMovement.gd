@@ -14,23 +14,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 
-func _on_Player_body_entered(body):
-	print("Colliding")
-	# Check if the colliding body is the Player
-	if body.name == "Player":
-		# Restart the current scene
-		
-		restart_current_scene()
-
-func restart_current_scene():
-	var scene_tree = get_tree()
-
-	# Get the current scene's file path
-	var current_scene_path = scene_tree.get_current_scene()
-
-	# Reload the current scene
-	scene_tree.change_scene(current_scene_path)
-
 func _physics_process(delta):
 		
 	if !Input.is_action_pressed("ui_select"):
