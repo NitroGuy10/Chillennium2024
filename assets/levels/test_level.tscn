@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=3]
+
+[node name="test_level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 677, 399 )
+
+[node name="Platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1148, 241 )
+scale = Vector2( 1.5625, 2.00993 )
+
+[node name="Platform2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1068, 617 )
+scale = Vector2( 1.25, 1.41772 )
+
+[node name="Platform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 695, 729 )
+scale = Vector2( 8.76, 1 )
+
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
