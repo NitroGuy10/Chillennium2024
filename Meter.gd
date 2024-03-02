@@ -13,6 +13,9 @@ var ram_used = 0
 func _ready():
 	pass # Replace with function body.
 
+func drain(speed, delta):
+	ram_used += speed * delta
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -20,4 +23,3 @@ func _process(delta):
 	
 	if ram_used > max_ram:
 		$Fill.scale.x = 500
-		$Fill.scale.y = 500
