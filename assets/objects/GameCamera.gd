@@ -21,7 +21,7 @@ func _process(delta):
 		$Shake.position.y = randf() * 10
 	
 	var blend = 1 - pow(0.1, lerpSpeed * delta)
-	position = lerp(position, get_parent().get_node("Player/PKB").position, blend)
+	position = lerp(position, get_parent().get_node("Player/PKB").global_position, blend)
 
-	position.x = clamp(position.x, get_parent().get_node("Player/PKB").position.x - (screenWidth / 2) + followBuffer, get_parent().get_node("Player/PKB").position.x + (screenWidth / 2) - followBuffer)
-	position.y = clamp(position.y, get_parent().get_node("Player/PKB").position.y - (screenHeight / 2) + followBuffer, get_parent().get_node("Player/PKB").position.y + (screenHeight / 2) - followBuffer)
+	position.x = clamp(position.x, get_parent().get_node("Player/PKB").global_position.x - (screenWidth / 2) + followBuffer, get_parent().get_node("Player/PKB").global_position.x + (screenWidth / 2) - followBuffer)
+	position.y = clamp(position.y, get_parent().get_node("Player/PKB").global_position.y - (screenHeight / 2) + followBuffer, get_parent().get_node("Player/PKB").global_position.y + (screenHeight / 2) - followBuffer)

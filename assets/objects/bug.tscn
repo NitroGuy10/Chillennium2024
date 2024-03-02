@@ -1,36 +1,39 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/sprites/box.png" type="Texture" id=1]
-[ext_resource path="res://assets/objects/PlayerMovement.gd" type="Script" id=2]
-[ext_resource path="res://assets/objects/Player.gd" type="Script" id=3]
+[ext_resource path="res://assets/objects/BugMovement.gd" type="Script" id=2]
+[ext_resource path="res://assets/objects/bug.gd" type="Script" id=3]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/nav.png-d5a3308d28ea42ea7b3f9a33f583f728.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 28, 28 )
 
-[node name="Player" type="Node2D"]
+[node name="Bug" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="PKB" type="KinematicBody2D" parent="."]
+[node name="BKB" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="PKB"]
+[node name="Sprite" type="Sprite" parent="BKB"]
 scale = Vector2( 0.559999, 0.559999 )
-texture = ExtResource( 1 )
+texture = SubResource( 2 )
 
-[node name="CeilingRayCast2D" type="RayCast2D" parent="PKB"]
+[node name="CeilingRayCast2D" type="RayCast2D" parent="BKB"]
 position = Vector2( 27, -27 )
 enabled = true
 cast_to = Vector2( 0, -3 )
 
-[node name="CeilingRayCast2D2" type="RayCast2D" parent="PKB"]
+[node name="CeilingRayCast2D2" type="RayCast2D" parent="BKB"]
 position = Vector2( -27, -27 )
 enabled = true
 cast_to = Vector2( 0, -3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PKB"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BKB"]
 shape = SubResource( 1 )
 
-[node name="PA" type="Area2D" parent="PKB"]
+[node name="BA" type="Area2D" parent="BKB"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PKB/PA"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BKB/BA"]
 shape = SubResource( 1 )

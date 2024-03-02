@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/objects/bug.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/objects/MemoryLeak.tscn" type="PackedScene" id=5]
+
+[node name="bug_level" type="Node2D"]
+
+[node name="Platform" parent="." instance=ExtResource( 2 )]
+position = Vector2( -6, 600 )
+scale = Vector2( 32.4459, 0.831935 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1258, -249 )
+
+[node name="Bug" parent="." instance=ExtResource( 1 )]
+position = Vector2( 990, -239 )
+
+[node name="MemoryLeak" parent="." instance=ExtResource( 5 )]
+position = Vector2( -168, 499 )
+
+[node name="GameCamera" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1255, -124 )
