@@ -20,4 +20,8 @@ texture = ExtResource( 1 )
 position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
+[node name="StartKillingTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="StartKillingTimer" to="." method="_on_StartKillingTimer_timeout"]

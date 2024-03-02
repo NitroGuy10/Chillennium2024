@@ -32,7 +32,7 @@ func block_segment():
 	var y_dist = $Line2D.points[-2].y - $Line2D.points[-3].y
 	kill_zone.rotation = atan2(y_dist, x_dist) + (PI / 2)
 	
-	kill_zone.scale.y = prev_segment_length() / 5
+	kill_zone.scale.y = prev_segment_length() / 4
 	add_child(kill_zone)
 
 
