@@ -7,8 +7,11 @@ var gravityscale = 1600.0
 
 var velocity = Vector2()
 
+var player
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player = get_parent().get_parent().get_node("Player")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,3 +45,9 @@ func _physics_process(delta):
 	
 	if !is_on_floor() and !Input.is_action_pressed("ui_select"):
 			velocity.y += gravityscale * delta * 0.5
+
+
+func _on_PA_area_entered(area):
+	if area.name == "BA":
+		player.dead = true
+		

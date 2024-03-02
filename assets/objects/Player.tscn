@@ -39,3 +39,5 @@ shape = SubResource( 1 )
 [node name="Dead" type="Sprite" parent="PKB"]
 visible = false
 texture = ExtResource( 4 )
+
+[connection signal="area_entered" from="PKB/PA" to="PKB" method="_on_PA_area_entered"]
