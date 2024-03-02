@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 
 var is_connecting = false
+var success = false
 var player
 
 var wire_kill_zone = preload("res://assets/objects/WireKillZone.tscn")
@@ -43,6 +44,10 @@ func _process(delta):
 		var point_pos = player_pos - $PylonArea/Sprite.global_position
 		point_pos.y -= 100
 		$Line2D.points[-1] = point_pos
+	
+	$LeakArea.monitoring = !success
+	$PylonArea.monitoring = !success
+	$LeakArea.visible = !success
 
 #func _physics_process(delta):
 #	for body in $LeakArea.get_overlapping_bodies():
@@ -66,5 +71,6 @@ func _on_PylonArea_area_entered(area):
 	if area.name == "PA" and player.connecting_leak == null:
 		is_connecting = true
 		player.connecting_leak = self
+		$Line2D.visible = true
 		
 	

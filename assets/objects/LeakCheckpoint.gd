@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 
 var connected = false
+var is_last = false
 
 var player
 
@@ -35,3 +36,8 @@ func _on_LinePositionFixTimer_timeout():
 	var point_pos = global_position - leak_pos
 	player.connecting_leak.get_node("Line2D").points[-2] = point_pos
 	player.connecting_leak.block_segment()
+	
+	if is_last:
+		player.connecting_leak.is_connecting = false
+		player.connecting_leak.success = true
+		player.connecting_leak = null
