@@ -39,8 +39,9 @@ func block_segment():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_connecting:
-		var player_pos = get_parent().get_node("Player/PKB").global_position
-		var point_pos = player_pos - position
+		var player_pos = player.get_node("PKB").global_position
+		var point_pos = player_pos - $PylonArea/Sprite.global_position
+		point_pos.y -= 100
 		$Line2D.points[-1] = point_pos
 
 #func _physics_process(delta):

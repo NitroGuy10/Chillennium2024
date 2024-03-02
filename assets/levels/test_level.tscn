@@ -26,8 +26,12 @@ scale = Vector2( 32.56, 1 )
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 max_ram = 5000
 
+[node name="Platform5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1506, 38 )
+scale = Vector2( -10.5572, 5.83957 )
+
 [node name="MemoryLeak" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1129, 626 )
+position = Vector2( -921, 680 )
 
 [node name="LeakCheckpoint" parent="." instance=ExtResource( 5 )]
 position = Vector2( -703, 635 )

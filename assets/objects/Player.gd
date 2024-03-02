@@ -10,7 +10,7 @@ var draining_pressing = false
 var draining_in_leak_area = false
 
 var ram_pressing_speed = 1000
-var ram_in_leak_area_speed = 1000
+var ram_in_leak_area_speed = 5000
 
 var meter
 var connecting_leak = null
