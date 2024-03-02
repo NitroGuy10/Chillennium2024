@@ -13,6 +13,9 @@ var ram_pressing_speed = 1000
 var ram_in_leak_area_speed = 1000
 
 var meter
+var connecting_leak = null
+
+var dead = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +23,17 @@ func _ready():
 	
 	
 func draining():
-	return draining_pressing or draining_in_leak_area
+	return draining_speed() != 0
+
+func draining_speed():
+	var drain_speed = 0
+	if draining_pressing:
+		drain_speed += ram_pressing_speed
+	if draining_in_leak_area:
+		drain_speed += ram_in_leak_area_speed
+	if connecting_leak != null:
+		drain_speed += connecting_leak.segment_length()
+	return drain_speed
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,7 +43,10 @@ func _process(delta):
 	elif Input.is_action_just_released("ui_select"):
 		draining_pressing = false
 	
-	if draining_pressing:
-		meter.drain(ram_pressing_speed, delta)
-	if draining_in_leak_area:
-		meter.drain(ram_in_leak_area_speed, delta)
+	meter.drain(draining_speed(), delta)
+	if (meter.ram_used > meter.max_ram):
+		dead = true
+		
+	
+	$PKB/Dead.visible = dead
+
