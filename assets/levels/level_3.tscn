@@ -100,3 +100,4 @@ level_tscn = "res://assets/levels/level_3.tscn"
 
 [editable path="MemoryLeak"]
 [editable path="GarbageCollector"]
+[editable path="GarbageCollector/LeakCheckpoint"]

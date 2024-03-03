@@ -49,7 +49,4 @@ position = Vector2( 1171, -346 )
 next_tscn = "res://assets/levels/level_2.tscn"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2602, -91 )
-scale = Vector2( 1, 0.986 )
-max_ram = 5000
-level_tscn = "res://assets/levels/level_1.tscn"
+position = Vector2( -1225, -33 )

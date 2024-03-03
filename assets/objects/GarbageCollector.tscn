@@ -44,7 +44,7 @@ texture = ExtResource( 7 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [editable path="LeakCheckpoint"]
