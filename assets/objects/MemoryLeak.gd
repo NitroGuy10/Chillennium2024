@@ -47,8 +47,12 @@ func _process(delta):
 	
 	$LeakArea.monitoring = !success
 	$PylonArea.monitoring = !success
-	$LeakArea.visible = !success
+#	$LeakArea.visible = !success
 	$Line2D.visible = success or is_connecting
+	
+	if success:
+		$LeakArea/Sprite.scale.x = max(0, $LeakArea/Sprite.scale.x - (5 * delta))
+		$LeakArea/Sprite.scale.y = max(0, $LeakArea/Sprite.scale.y - (5 * delta))
 	
 	if success:
 		$Line2D.texture = load("res://assets/spriteframes/animated_wire.tres")

@@ -25,6 +25,7 @@ func _on_DispSizeTimer_timeout():
 
 func _on_Area2D_area_entered(area):
 	if area.name == "PA":
+		get_parent().get_node("Player/PKB").winning = true
 		$NextLevelTimer.start()
 		get_parent().get_node("GameCamera").fading_to_black = true
 

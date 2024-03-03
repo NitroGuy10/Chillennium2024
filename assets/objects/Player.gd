@@ -10,7 +10,7 @@ var draining_pressing = false
 var draining_in_leak_area = false
 
 var ram_pressing_speed = 1000
-var ram_in_leak_area_speed = 5000
+var ram_in_leak_area_speed = 10000
 
 var meter
 var connecting_leak = null
@@ -31,6 +31,7 @@ func draining_speed():
 		drain_speed += ram_pressing_speed
 	if draining_in_leak_area:
 		drain_speed += ram_in_leak_area_speed
+		dead = true
 	if connecting_leak != null:
 		drain_speed += connecting_leak.segment_length()
 	return drain_speed
