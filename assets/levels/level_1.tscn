@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=4]
 
 [node name="test_level" type="Node2D"]
 
@@ -42,6 +43,10 @@ scale = Vector2( 3.95793, 0.633106 )
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 12, -43 )
 scale = Vector2( 3.36, 1 )
+
+[node name="Portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1171, -346 )
+next_tscn = "res://assets/levels/level_2.tscn"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 max_ram = 5000
