@@ -97,7 +97,12 @@ func _on_PA_area_entered(area):
 
 
 func _on_StorePosTimer_timeout():
-	pass # Replace with function body.
+	var dup = $AnimatedSprite.duplicate()
+	#dup.owner = get_parent()
+	
+	get_parent().add_child_below_node(player, dup)
+	dup.stop()
+	dup.global_position = global_position
 
 
 func _on_AnimatedSprite_animation_finished():
