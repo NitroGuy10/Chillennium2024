@@ -8,6 +8,8 @@ var gravityscale = 1600.0
 var velocity = Vector2()
 
 var player
+var clipping = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,8 +50,11 @@ func _physics_process(delta):
 		else:
 			velocity.y = 0
 		
-		if abs(velocity.x) < 15:
-			$AnimatedSprite.animation = "idle"
+		if clipping:
+			$AnimatedSprite.animation = "clip"
+		else:
+			if abs(velocity.x) < 15:
+				$AnimatedSprite.animation = "idle"
 	else:
 		if !Input.is_action_pressed("ui_select"):
 			velocity.y += gravityscale * delta * 0.5
@@ -70,17 +75,20 @@ func _physics_process(delta):
 		pass
 		
 	
-	if velocity.y < -30:
-		if abs(velocity.x) > 15:
-			$AnimatedSprite.animation = "run"
-		else:
-			$AnimatedSprite.animation = "jump"
+	if clipping:
+		$AnimatedSprite.animation = "clip"
 	else:
-		if abs(velocity.x) > 15:
-			$AnimatedSprite.animation = "run"
+		if velocity.y < -30:
+			if abs(velocity.x) > 15:
+				$AnimatedSprite.animation = "run"
+			else:
+				$AnimatedSprite.animation = "jump"
 		else:
-#			$AnimatedSprite.animation = "idle"
-			pass
+			if abs(velocity.x) > 15:
+				$AnimatedSprite.animation = "run"
+			else:
+	#			$AnimatedSprite.animation = "idle"
+				pass
 
 func _on_PA_area_entered(area):
 	if area.name == "BA":
@@ -90,3 +98,8 @@ func _on_PA_area_entered(area):
 
 func _on_StorePosTimer_timeout():
 	pass # Replace with function body.
+
+
+func _on_AnimatedSprite_animation_finished():
+	if clipping:
+		clipping = false
