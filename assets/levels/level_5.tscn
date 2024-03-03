@@ -58,7 +58,7 @@ scale = Vector2( 3.36, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 823, 301 )
-next_tscn = "res://assets/levels/level_2.tscn"
+next_tscn = "res://assets/levels/level_6.tscn"
 
 [node name="GarbageCollector" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1199, 269 )
@@ -69,7 +69,7 @@ position = Vector2( 54, -10 )
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( 25, 17 )
 z_index = 1
-frame = 0
+frame = 2
 
 [node name="Pinkone" type="Sprite" parent="GarbageCollector"]
 position = Vector2( 505, -102 )
@@ -90,6 +90,84 @@ texture = ExtResource( 10 )
 
 [node name="Pinkone9" type="Sprite" parent="GarbageCollector"]
 position = Vector2( 1793, -116 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone14" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1885, -119 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone15" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1885, -119 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone16" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1912, -210 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone17" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1912, -303 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone18" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1912, -303 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone19" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1912, -390 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone20" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1910, -488 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone21" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 2002, -423 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone22" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1974, -115 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone23" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 2077, -118 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone24" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1912, -22 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone25" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1907, 52 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone26" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1907, 52 )
 rotation = 1.57899
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 10 )
@@ -137,12 +215,6 @@ texture = ExtResource( 10 )
 [node name="Pinkone7" type="Sprite" parent="GarbageCollector"]
 position = Vector2( 138, -657 )
 rotation = -1.58032
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 10 )
-
-[node name="Pinkone8" type="Sprite" parent="GarbageCollector"]
-position = Vector2( 231, -657 )
-rotation = 3.14046
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 10 )
 
@@ -213,7 +285,7 @@ scale = Vector2( 0.92, 12.8 )
 texture = ExtResource( 9 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( -6, -466 )
+position = Vector2( 877, -1010 )
 max_ram = 7000
 background_number = "3"
 level_tscn = "res://assets/levels/level_5.tscn"

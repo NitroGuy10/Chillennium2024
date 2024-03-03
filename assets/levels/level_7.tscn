@@ -40,7 +40,7 @@ scale = Vector2( 26.9662, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1107, -521 )
-next_tscn = "res://assets/levels/level_6.tscn"
+next_tscn = "res://assets/levels/EndScene.tscn"
 
 [node name="Bug" parent="." instance=ExtResource( 4 )]
 position = Vector2( 303, -119 )

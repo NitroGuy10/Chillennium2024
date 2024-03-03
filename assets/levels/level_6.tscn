@@ -141,12 +141,6 @@ position = Vector2( -758.803, 87.7183 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
-[node name="Pinkone2" type="Sprite" parent="."]
-position = Vector2( -669.801, 88.5168 )
-rotation = -1.60366
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
 [node name="Pinkone3" type="Sprite" parent="."]
 position = Vector2( -580.802, 88.3153 )
 scale = Vector2( 0.3, 0.3 )
@@ -170,12 +164,6 @@ texture = ExtResource( 8 )
 
 [node name="Pinkone7" type="Sprite" parent="."]
 position = Vector2( -500.519, -228.867 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
-[node name="Pinkone8" type="Sprite" parent="."]
-position = Vector2( -500.519, -228.867 )
-rotation = -1.56581
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
@@ -208,26 +196,9 @@ rotation = 3.11966
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
-[node name="Pinkone17" type="Sprite" parent="."]
-position = Vector2( -57.2549, 329.13 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
-[node name="Pinkone18" type="Sprite" parent="."]
-position = Vector2( -57.2549, 329.13 )
-rotation = -1.56615
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
 [node name="Pinkone19" type="Sprite" parent="."]
 position = Vector2( 131.303, 133.703 )
 rotation = -0.000200469
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
-[node name="Pinkone20" type="Sprite" parent="."]
-position = Vector2( 223.303, 133.495 )
-rotation = -3.12039
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
@@ -237,21 +208,9 @@ rotation = -0.000200469
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
-[node name="Pinkone22" type="Sprite" parent="."]
-position = Vector2( 408.307, 135.076 )
-rotation = -0.000200469
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
 [node name="Pinkone32" type="Sprite" parent="."]
 position = Vector2( 502.302, 132.863 )
 rotation = 1.53797
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
-[node name="Pinkone34" type="Sprite" parent="."]
-position = Vector2( 240.445, -245.545 )
-rotation = -0.000200469
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
@@ -289,12 +248,6 @@ texture = ExtResource( 8 )
 position = Vector2( 1202.05, -422.723 )
 rotation = 3.13793
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
-
-[node name="Pinkone23" type="Sprite" parent="."]
-position = Vector2( 635.14, 61.5621 )
-rotation = -1.60174
-scale = Vector2( 0.215727, 0.207187 )
 texture = ExtResource( 8 )
 
 [node name="Pinkone30" type="Sprite" parent="."]
@@ -361,12 +314,6 @@ position = Vector2( -221.006, -2.4996 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
-[node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 199, -924 )
-max_ram = 4200
-background_number = "3"
-level_tscn = "res://assets/levels/level_6.tscn"
-
 [node name="Label" type="Label" parent="."]
 margin_left = -286.0
 margin_top = 55.0
@@ -374,3 +321,9 @@ margin_right = -146.0
 margin_bottom = 69.0
 rect_scale = Vector2( 1.88, 2.28 )
 text = "Watch out for bugs :0!"
+
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
+position = Vector2( 199, -924 )
+max_ram = 4200
+background_number = "3"
+level_tscn = "res://assets/levels/level_6.tscn"
