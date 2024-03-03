@@ -91,6 +91,7 @@ text = "R to restart!"
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 417, -951 )
 max_ram = 4200
+background_number = "2"
 level_tscn = "res://assets/levels/level_4.tscn"
 
 [editable path="GarbageCollector"]
