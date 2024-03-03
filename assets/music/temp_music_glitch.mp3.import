@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/temp_music_glitch.mp3-d44ce6348cb0aa66e3a8d81ff99281d3.mp3str"
+
+[deps]
+
+source_file="res://assets/music/temp_music_glitch.mp3"
+dest_files=[ "res://.import/temp_music_glitch.mp3-d44ce6348cb0aa66e3a8d81ff99281d3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
