@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(1).png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(2).png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/npcs/garbage text.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/pylon/End Pole.PNG" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/pylon/End Pole.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -31,8 +31,8 @@ position = Vector2( 20, -32 )
 position = Vector2( 12, 5 )
 
 [node name="Sprite2" parent="LeakCheckpoint/PylonArea" index="0"]
-position = Vector2( 6, 40 )
-scale = Vector2( 0.0509259, 0.0723457 )
+position = Vector2( 6, 42 )
+scale = Vector2( 0.84, 0.56 )
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="LeakCheckpoint/PylonArea" index="2"]
@@ -45,11 +45,11 @@ scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -2, -3 )
+position = Vector2( -2, -2 )
 scale = Vector2( 0.563239, 0.475966 )
 z_index = -5
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 
 [editable path="LeakCheckpoint"]

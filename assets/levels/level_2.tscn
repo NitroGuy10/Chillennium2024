@@ -16,39 +16,31 @@
 position = Vector2( -1033, -129 )
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -4, 411 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform3" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -1330, -121 )
 scale = Vector2( 0.966181, 11.64 )
 
 [node name="Platform4" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 1293, -119 )
 scale = Vector2( 0.966181, 11.64 )
 
 [node name="Platform2" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 0, -653 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform5" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( -765, 266 )
+position = Vector2( -765, 268 )
 
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( -315, 89 )
+position = Vector2( -309, 92 )
 
 [node name="Platform8" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 223, 29 )
+position = Vector2( 222, 35 )
 
 [node name="Platform6" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 760, -214 )
 scale = Vector2( 3.95793, 0.633106 )
 
@@ -75,13 +67,13 @@ position = Vector2( -315, -16 )
 introduceSelf = true
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
-frame = 2
+frame = 1
 
 [node name="Label" type="Label" parent="."]
-margin_left = 549.0
-margin_top = -571.0
-margin_right = 717.0
-margin_bottom = -437.0
+margin_left = 107.0
+margin_top = -485.0
+margin_right = 275.0
+margin_bottom = -351.0
 rect_scale = Vector2( 2.48, 2.4 )
 text = "Connect memory leaks to 
 garbage collectors!"

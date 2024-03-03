@@ -13,8 +13,8 @@ script = ExtResource( 2 )
 [node name="PylonArea" type="Area2D" parent="."]
 
 [node name="Sprite2" type="Sprite" parent="PylonArea"]
-position = Vector2( 6, 38 )
-scale = Vector2( 0.08, 0.08 )
+position = Vector2( -5.26241, 47.5201 )
+scale = Vector2( -0.791104, 0.589057 )
 texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="PylonArea"]

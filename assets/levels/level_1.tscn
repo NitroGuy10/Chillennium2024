@@ -14,47 +14,38 @@
 position = Vector2( -1183, -275 )
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -4, 411 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform3" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -1330, -121 )
 scale = Vector2( 0.966181, 11.64 )
 
 [node name="Platform4" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 1293, -119 )
 scale = Vector2( 0.966181, 11.64 )
 
 [node name="Platform2" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 0, -653 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform5" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( -778.596, 320 )
 
 [node name="Platform8" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 460.17, 49 )
+position = Vector2( 454, 59 )
 scale = Vector2( 0.840288, 0.84 )
 
 [node name="Platform9" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 992, -260 )
-scale = Vector2( 5.15449, -0.334623 )
+position = Vector2( 991, -254 )
+scale = Vector2( 5.15449, 0.465377 )
 
 [node name="Platform6" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( -370.332, 248 )
-scale = Vector2( 4.43707, 0.833108 )
+position = Vector2( -367, 257 )
+scale = Vector2( 4.43707, 0.993108 )
 
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 26.9514, -47 )
+position = Vector2( 23, -43 )
 scale = Vector2( 3.6395, 0.92 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]

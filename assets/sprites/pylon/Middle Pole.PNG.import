@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Middle Pole.PNG-03b27433a15cf67817666c7c8f059e82.stex"
+path="res://.import/Middle Pole.png-08b6f326a4d3ab67025dbd5701e39c20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pylon/Middle Pole.PNG"
-dest_files=[ "res://.import/Middle Pole.PNG-03b27433a15cf67817666c7c8f059e82.stex" ]
+source_file="res://assets/sprites/pylon/Middle Pole.png"
+dest_files=[ "res://.import/Middle Pole.png-08b6f326a4d3ab67025dbd5701e39c20.stex" ]
 
 [params]
 
