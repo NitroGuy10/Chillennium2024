@@ -38,16 +38,16 @@ position = Vector2( -1095, -365 )
 scale = Vector2( 3.8, 1 )
 
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
-position = Vector2( -255, 174 )
+position = Vector2( -184, -176 )
 
 [node name="Platform10" parent="." instance=ExtResource( 2 )]
-position = Vector2( -834, 187 )
+position = Vector2( -490, 165 )
 
 [node name="Platform11" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1238, 216 )
 
 [node name="Platform8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 285, 42 )
+position = Vector2( 201, 59 )
 
 [node name="Platform6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 751, -78 )
@@ -65,26 +65,24 @@ position = Vector2( -1071.09, -16.3138 )
 scale = Vector2( 1.32421, 0.276598 )
 
 [node name="CollisionShape2D" parent="MemoryLeak/LeakArea" index="1"]
-position = Vector2( -1071.48, -15.6613 )
-scale = Vector2( 0.34375, 0.265412 )
+position = Vector2( -1071.09, -16.5003 )
+scale = Vector2( 0.456805, 0.282145 )
 
 [node name="GarbageCollector" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1147, 310 )
+position = Vector2( -1135, 313 )
 
-[node name="LeakCheckpoint" parent="." instance=ExtResource( 6 )]
-position = Vector2( -743, 152 )
-rotation = 1.53816
+[node name="LeakCheckpoint" parent="GarbageCollector" index="1"]
+position = Vector2( 97, -12 )
+rotation = 1.58057
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -251, 74 )
+position = Vector2( -180, -276 )
 rotation = -0.00848891
 
-[node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 186, 43 )
-rotation = 4.63214
-
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-max_ram = 4000
+position = Vector2( -1207, 176 )
+max_ram = 4200
 level_tscn = "res://assets/levels/level_3.tscn"
 
 [editable path="MemoryLeak"]
+[editable path="GarbageCollector"]

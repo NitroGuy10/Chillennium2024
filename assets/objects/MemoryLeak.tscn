@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/sprites/nav.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 114.453, 50 )
+extents = Vector2( 83.3335, 32.3635 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27, 25 )
@@ -24,7 +24,8 @@ scale = Vector2( 2.27734, 1 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeakArea"]
-position = Vector2( -64.4531, 0 )
+position = Vector2( -64.4531, 0.702255 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="PylonArea" type="Area2D" parent="."]
