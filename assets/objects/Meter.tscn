@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Meter.gd" type="Script" id=1]
+[ext_resource path="res://assets/objects/Meter.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/box.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/meter/Filling.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/meter/Outline.png" type="Texture" id=4]

@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	
+	pass
 
 #func _on_Timer_timeout():
 ##	if size < 0.53:

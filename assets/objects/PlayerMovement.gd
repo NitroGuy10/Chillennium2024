@@ -10,6 +10,8 @@ var velocity = Vector2()
 var player
 var clipping = false
 
+var kill_timer = preload("res://assets/objects/KillTimer.tscn")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -97,12 +99,16 @@ func _on_PA_area_entered(area):
 
 
 func _on_StorePosTimer_timeout():
-	var dup = $AnimatedSprite.duplicate()
-	#dup.owner = get_parent()
+	if Input.is_action_pressed("ui_select"):
+		var dup = $AnimatedSprite.duplicate()
+		#dup.owner = get_parent()
+
+		get_parent().add_child_below_node(player, dup)
+		dup.visible = false
+		dup.playing = true
+		dup.global_position = global_position
+		dup.add_child(kill_timer.instance())
 	
-	get_parent().add_child_below_node(player, dup)
-	dup.stop()
-	dup.global_position = global_position
 
 
 func _on_AnimatedSprite_animation_finished():

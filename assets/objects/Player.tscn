@@ -86,7 +86,7 @@ visible = false
 texture = ExtResource( 4 )
 
 [node name="StorePosTimer" type="Timer" parent="PKB"]
-wait_time = 0.3
+wait_time = 0.1
 autostart = true
 
 [connection signal="animation_finished" from="PKB/AnimatedSprite" to="PKB" method="_on_AnimatedSprite_animation_finished"]
