@@ -17,7 +17,7 @@ extents = Vector2( 83.3335, 32.3635 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27, 25 )
 
-[node name="test_level" type="Node2D"]
+[node name="test_level2" type="Node2D"]
 position = Vector2( 4, -2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -123,9 +123,8 @@ position = Vector2( 1040, -522 )
 next_tscn = "res://assets/levels/level_5.tscn"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 279, 977 )
+position = Vector2( 59, -91 )
 max_ram = 4200
-background_tres = "2"
 level_tscn = "res://assets/levels/level_4.tscn"
 
 [connection signal="area_entered" from="MemoryLeak/LeakArea" to="MemoryLeak" method="_on_LeakArea_area_entered"]
