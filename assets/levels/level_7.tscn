@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/objects/bug.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/objects/bug_invert.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/objects/MemoryLeak.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/objects/GarbageCollector.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/objects/LeakCheckpoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=10]
 
 [node name="test_level" type="Node2D"]
@@ -74,9 +77,6 @@ position = Vector2( -697, 72 )
 [node name="Platform16" parent="." instance=ExtResource( 2 )]
 position = Vector2( -488, -345 )
 
-[node name="Platform17" parent="." instance=ExtResource( 2 )]
-position = Vector2( 264, -362 )
-
 [node name="Platform11" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1095, -132 )
 scale = Vector2( 5.43632, -0.47901 )
@@ -97,7 +97,7 @@ position = Vector2( -404, 136 )
 scale = Vector2( 5.33119, 0.859783 )
 
 [node name="Platform13" parent="." instance=ExtResource( 2 )]
-position = Vector2( 477, -400 )
+position = Vector2( 523, -400 )
 scale = Vector2( 1.77119, 0.859783 )
 
 [node name="Bug6" parent="." instance=ExtResource( 5 )]
@@ -106,7 +106,31 @@ position = Vector2( -125, -110 )
 [node name="Bug9" parent="." instance=ExtResource( 5 )]
 position = Vector2( -706, -312 )
 
+[node name="MemoryLeak" parent="." instance=ExtResource( 6 )]
+position = Vector2( -870, 380 )
+
+[node name="LeakArea" parent="MemoryLeak" index="0"]
+position = Vector2( 2210, -917 )
+
+[node name="CollisionShape2D" parent="MemoryLeak/LeakArea" index="1"]
+position = Vector2( -63.2812, -1.1236 )
+scale = Vector2( 1, 1 )
+
+[node name="GarbageCollector" parent="." instance=ExtResource( 7 )]
+position = Vector2( 82, -410 )
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1792, -1165 )
 max_ram = 4200
 level_tscn = "res://assets/levels/level_7.tscn"
+
+[node name="LeakCheckpoint" parent="." instance=ExtResource( 8 )]
+position = Vector2( -881, -346 )
+
+[node name="LeakCheckpoint2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -198, -15 )
+
+[node name="LeakCheckpoint3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 631, -261 )
+
+[editable path="MemoryLeak"]

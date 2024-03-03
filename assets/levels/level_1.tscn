@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sprites/platforms/IMG_0111.PNG" type="Texture" id=5]
 
 [node name="test_level" type="Node2D"]
+scale = Vector2( 1.0018, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1042, -515 )
@@ -27,22 +29,28 @@ position = Vector2( 0, -653 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform5" parent="." instance=ExtResource( 2 )]
-position = Vector2( -778, 316 )
+visible = false
+position = Vector2( -778.596, 320 )
 
 [node name="Platform8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 461, 60 )
+visible = false
+position = Vector2( 460.17, 49 )
+scale = Vector2( 0.840288, 0.84 )
 
 [node name="Platform9" parent="." instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 992, -260 )
 scale = Vector2( 5.15449, -0.334623 )
 
 [node name="Platform6" parent="." instance=ExtResource( 2 )]
-position = Vector2( -397, 236 )
-scale = Vector2( 3.95793, 0.633106 )
+visible = false
+position = Vector2( -370.332, 248 )
+scale = Vector2( 4.43707, 0.833108 )
 
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 12, -43 )
-scale = Vector2( 3.36, 1 )
+visible = false
+position = Vector2( 26.9514, -47 )
+scale = Vector2( 3.6395, 0.92 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1171, -346 )
@@ -58,3 +66,115 @@ text = "Space to Hang!"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 level_tscn = "res://assets/levels/level_1.tscn"
+
+[node name="Img0111" type="Sprite" parent="."]
+position = Vector2( -779.594, 316 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0112" type="Sprite" parent="."]
+position = Vector2( -553.003, 249 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0113" type="Sprite" parent="."]
+position = Vector2( -462.166, 248 )
+rotation = 1.56989
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0114" type="Sprite" parent="."]
+position = Vector2( -372.329, 249 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0117" type="Sprite" parent="."]
+position = Vector2( -191.654, 248 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0118" type="Sprite" parent="."]
+position = Vector2( -110.8, -48 )
+rotation = -3.14084
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0119" type="Sprite" parent="."]
+position = Vector2( -21.9604, -48 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0121" type="Sprite" parent="."]
+position = Vector2( 66.8794, -47 )
+rotation = -1.5638
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0122" type="Sprite" parent="."]
+position = Vector2( 157.716, -46 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0116" type="Sprite" parent="."]
+position = Vector2( -282.491, 249 )
+rotation = -1.55766
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0123" type="Sprite" parent="."]
+position = Vector2( 463.165, 55 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Img0124" type="Sprite" parent="."]
+position = Vector2( 752.642, -259 )
+rotation = -1.57989
+scale = Vector2( 0.130102, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0125" type="Sprite" parent="."]
+position = Vector2( 790.574, -259 )
+scale = Vector2( 0.130102, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0126" type="Sprite" parent="."]
+position = Vector2( 829.504, -259 )
+rotation = -1.56291
+scale = Vector2( 0.130102, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0129" type="Sprite" parent="."]
+position = Vector2( 890.394, -259 )
+scale = Vector2( 0.283925, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0130" type="Sprite" parent="."]
+position = Vector2( 954.279, -259 )
+scale = Vector2( 0.164142, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0131" type="Sprite" parent="."]
+position = Vector2( 1211.81, -258 )
+scale = Vector2( 0.217986, 0.125092 )
+texture = ExtResource( 5 )
+
+[node name="Img0132" type="Sprite" parent="."]
+position = Vector2( 1154.92, -258 )
+scale = Vector2( 0.163783, 0.125566 )
+texture = ExtResource( 5 )
+
+[node name="Img0133" type="Sprite" parent="."]
+position = Vector2( 1107, -257 )
+scale = Vector2( 0.163783, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0134" type="Sprite" parent="."]
+position = Vector2( 1060.09, -258 )
+rotation = -3.12988
+scale = Vector2( 0.163783, 0.136711 )
+texture = ExtResource( 5 )
+
+[node name="Img0135" type="Sprite" parent="."]
+position = Vector2( 1007.18, -258 )
+scale = Vector2( 0.203711, 0.136711 )
+texture = ExtResource( 5 )
