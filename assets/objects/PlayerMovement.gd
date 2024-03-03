@@ -81,9 +81,12 @@ func _physics_process(delta):
 		else:
 #			$AnimatedSprite.animation = "idle"
 			pass
-	print(velocity.y)
 
 func _on_PA_area_entered(area):
 	if area.name == "BA":
 		player.dead = true
 		
+
+
+func _on_StorePosTimer_timeout():
+	pass # Replace with function body.

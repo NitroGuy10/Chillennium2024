@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(1).png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(2).png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/npcs/garbage text.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/pylon/Red_pole.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/pylon/End Pole.PNG" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -43,8 +43,9 @@ texture = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.15, 0.15 )
+z_index = -5
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true
 
 [editable path="LeakCheckpoint"]
