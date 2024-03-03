@@ -42,3 +42,4 @@ func _on_LinePositionFixTimer_timeout():
 		player.connecting_leak.success = true
 		player.connecting_leak.get_node("Line2D").remove_point(-1)
 		player.connecting_leak = null
+		player.meter.ram_used = 0
