@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Chillennium2024"
-run/main_scene="res://assets/levels/test_level.tscn"
+run/main_scene="res://assets/objects/Game.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -23,6 +23,14 @@ window/size/resizable=false
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+restart={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 

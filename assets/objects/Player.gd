@@ -36,8 +36,10 @@ func draining_speed():
 	return drain_speed
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
+	if Input.is_action_pressed("restart"):
+		meter.ram_used += 100000 * delta
+	
 	if Input.is_action_just_pressed("ui_select"):
 		draining_pressing = true
 	elif Input.is_action_just_released("ui_select"):
