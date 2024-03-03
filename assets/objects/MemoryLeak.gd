@@ -76,5 +76,5 @@ func _on_PylonArea_area_entered(area):
 		is_connecting = true
 		player.connecting_leak = self
 		$Line2D.visible = true
-		
+		player.get_node("PKB").clipping = true
 	

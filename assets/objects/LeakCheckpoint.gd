@@ -27,6 +27,7 @@ func _on_PylonArea_area_entered(area):
 		var leak_pos = player.connecting_leak.global_position
 		var point_pos = global_position - leak_pos
 		player.connecting_leak.get_node("Line2D").add_point(point_pos, -2)
+		player.get_node("PKB").clipping = true
 		connected = true
 		$LinePositionFixTimer.start()
 
