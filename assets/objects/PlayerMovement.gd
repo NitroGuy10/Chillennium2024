@@ -20,6 +20,12 @@ func _ready():
 
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("ui_select"):
+		$AnimatedSprite.stop()
+	elif Input.is_action_just_released("ui_select"):
+		$AnimatedSprite.play()
+	$AnimatedSprite.flip_h = velocity.x < 0
+	
 		
 	if Input.is_action_pressed("ui_select"):
 		#velocity += (hang_accel * delta * 0.5) * velocity.normalized()
@@ -34,11 +40,16 @@ func _physics_process(delta):
 	if $CeilingRayCast2D.is_colliding() or $CeilingRayCast2D2.is_colliding():
 		velocity.y = max(velocity.y, 0)
 	
+	
+	
 	if is_on_floor():
 		if Input.is_action_pressed("ui_up") and !Input.is_action_pressed("ui_select"):
 			velocity.y = -jumpvelocity
 		else:
 			velocity.y = 0
+		
+		if abs(velocity.x) < 15:
+			$AnimatedSprite.animation = "idle"
 	else:
 		if !Input.is_action_pressed("ui_select"):
 			velocity.y += gravityscale * delta * 0.5
@@ -49,12 +60,28 @@ func _physics_process(delta):
 	
 	move_and_slide(velocity, Vector2.UP)
 	
+
+	
 	if !is_on_floor() and !Input.is_action_pressed("ui_select"):
 			velocity.y += gravityscale * delta * 0.5
 	
 	if Input.is_action_pressed("ui_select"):
 		#velocity += (hang_accel * delta * 0.5) * velocity.normalized()
 		pass
+		
+	
+	if velocity.y < -30:
+		if abs(velocity.x) > 15:
+			$AnimatedSprite.animation = "run"
+		else:
+			$AnimatedSprite.animation = "jump"
+	else:
+		if abs(velocity.x) > 15:
+			$AnimatedSprite.animation = "run"
+		else:
+#			$AnimatedSprite.animation = "idle"
+			pass
+	print(velocity.y)
 
 func _on_PA_area_entered(area):
 	if area.name == "BA":
