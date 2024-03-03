@@ -1,22 +1,85 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Meter.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/box.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/meter/Filling.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/meter/Outline.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/ram.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/meter/Bar.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/meter/Bar2.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/meter/Sparkle2.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/meter/Sparkle1.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/meter/Sparkle3.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Meter" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
+[node name="BackgroundSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1185, 268 )
+scale = Vector2( 0.156337, 0.156337 )
+frames = SubResource( 2 )
+frame = 3
+playing = true
+
 [node name="Fill" type="Node2D" parent="."]
-position = Vector2( 1224, 265 )
+position = Vector2( 1227.94, 379.25 )
+
+[node name="FillSprite2" type="Sprite" parent="Fill"]
+position = Vector2( -42.9375, -111.25 )
+scale = Vector2( 0.162801, 0.159116 )
+texture = ExtResource( 3 )
 
 [node name="FillSprite" type="Sprite" parent="Fill"]
+visible = false
 position = Vector2( 12, -132 )
 scale = Vector2( 0.57, 1.72022 )
 texture = ExtResource( 2 )
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Fill"]
+position = Vector2( -45.9375, -266.25 )
+texture = ExtResource( 5 )
+emission_shape = 2
+emission_rect_extents = Vector2( 50, 1 )
+direction = Vector2( 0, -1 )
+gravity = Vector2( 0, 500 )
+initial_velocity = 216.51
+damping = 100.0
+scale_amount = 0.08
+hue_variation = 1.0
+hue_variation_random = 1.0
+
+[node name="Fillness" type="AnimatedSprite" parent="Fill"]
+position = Vector2( -47.9375, -262.25 )
+scale = Vector2( 0.160532, 0.160532 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
 [node name="MaxSprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1236, 44.625 )
 scale = Vector2( 0.560001, 0.0525 )
 texture = ExtResource( 2 )
+
+[node name="OutlineSprite" type="Sprite" parent="."]
+position = Vector2( 1182, 267 )
+scale = Vector2( 0.161728, 0.161728 )
+texture = ExtResource( 4 )

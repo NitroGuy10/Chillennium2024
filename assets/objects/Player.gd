@@ -50,5 +50,5 @@ func _physics_process(delta):
 		dead = true
 		
 	
-	$PKB/Dead.visible = dead
+#	$PKB/Dead.visible = dead
 

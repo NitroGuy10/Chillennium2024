@@ -58,6 +58,10 @@ func _physics_process(delta):
 		$Shake.position.x = randf() * (draining_speed / 100)   
 		$Shake.position.y = randf() * (draining_speed / 100)
 	
+	$Meter/Fill/FillSprite2.modulate = Color(1 - max(0, drain_speed_lerp - 500) / 500, 1 - max(0, drain_speed_lerp - 300) / 300, 1)
+	$Meter/Fill/Fillness.modulate = Color(0.8 + max(0, drain_speed_lerp - 500) / 500, 0.8 + max(0, drain_speed_lerp - 500) / 500, 0.8 + max(0, drain_speed_lerp - 500) / 500)
+	$Meter/Fill/CPUParticles2D.emitting = drain_speed_lerp > 100
+	
 	$GlitchFX.material.set_shader_param("abberationAmtX", 0.000 + (0.01 * ram_percent) + (0.00001 * drain_speed_lerp))
 	$GlitchFX.material.set_shader_param("abberationAmtY", 0.000 + (0.01 * ram_percent) + (0.00001 * drain_speed_lerp))
 	$GlitchFX.material.set_shader_param("dispAmt", (0.003 * ram_percent) + (0.00001 * drain_speed_lerp))
