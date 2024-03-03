@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/objects/MemoryLeak.gd" type="Script" id=7]
 [ext_resource path="res://assets/sprites/leak.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/leak_pylon.png" type="Texture" id=9]
+[ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 83.3335, 32.3635 )
@@ -109,14 +110,20 @@ position = Vector2( 1148, -694 )
 rotation = 6.2426
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
+position = Vector2( 1156, -623 )
+scale = Vector2( 0.128704, 0.106481 )
 frame = 2
 
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
 position = Vector2( -796, -186 )
 rotation = -1.5496
 
+[node name="Portal" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1040, -522 )
+next_tscn = "res://assets/levels/level_5.tscn"
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( -584, 900 )
+position = Vector2( 279, 977 )
 max_ram = 4200
 background_tres = "2"
 level_tscn = "res://assets/levels/level_4.tscn"

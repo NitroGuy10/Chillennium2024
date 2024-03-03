@@ -17,7 +17,9 @@ func _ready():
 func _physics_process(delta):
 		
 	if !Input.is_action_pressed("ui_select"):
-		velocity.x *= horizontal_damping
+		if !Input.is_action_pressed("ui_select"):
+			var blend = 1 - pow(0.001, horizontal_damping * delta)
+			velocity.x = lerp(velocity.x, 0, blend)
 		if Input.is_action_pressed("ui_left"):
 			velocity.x -= walkspeed
 		elif Input.is_action_pressed("ui_right"):

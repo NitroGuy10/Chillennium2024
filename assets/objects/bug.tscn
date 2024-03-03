@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/sprites/npcs/monster/Untitled_Artwork(1).png" type="Texture" id=1]
 [ext_resource path="res://assets/objects/BugMovement.gd" type="Script" id=2]
-[ext_resource path="res://assets/objects/bug.gd" type="Script" id=3]
+[ext_resource path="res://assets/levels/bug.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/npcs/monster/Untitled_Artwork.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=3]
@@ -18,7 +18,7 @@ flags = 4
 load_path = "res://.import/nav.png-d5a3308d28ea42ea7b3f9a33f583f728.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 28, 28 )
+extents = Vector2( 22.75, 37 )
 
 [node name="Bug" type="Node2D"]
 script = ExtResource( 3 )
@@ -32,6 +32,7 @@ script = ExtResource( 2 )
 position = Vector2( 3, 3 )
 scale = Vector2( 0.07, 0.07 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="BKB"]
@@ -50,9 +51,11 @@ enabled = true
 cast_to = Vector2( 0, -3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BKB"]
+position = Vector2( 1, 9 )
 shape = SubResource( 1 )
 
 [node name="BA" type="Area2D" parent="BKB"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BKB/BA"]
+position = Vector2( 1, 9 )
 shape = SubResource( 1 )
