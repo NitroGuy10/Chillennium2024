@@ -57,12 +57,12 @@ scale = Vector2( 3.36, 1 )
 position = Vector2( 823, 301 )
 next_tscn = "res://assets/levels/level_2.tscn"
 
-[node name="GameCamera" parent="." instance=ExtResource( 3 )]
-background_number = "3"
-level_tscn = "res://assets/levels/level_1.tscn"
-
 [node name="GarbageCollector" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1199, 269 )
+
+[node name="AnimatedSprite" parent="GarbageCollector" index="3"]
+z_index = 1
+frame = 2
 
 [node name="MemoryLeak" parent="." instance=ExtResource( 7 )]
 position = Vector2( 975, -399 )
@@ -90,4 +90,11 @@ position = Vector2( -45, 258 )
 [node name="LeakCheckpoint4" parent="." instance=ExtResource( 5 )]
 position = Vector2( -548, 16 )
 
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
+max_ram = 7000
+background_number = "3"
+level_tscn = "res://assets/levels/level_5.tscn"
+
+[editable path="GarbageCollector"]
+[editable path="GarbageCollector/LeakCheckpoint"]
 [editable path="MemoryLeak"]

@@ -76,7 +76,7 @@ rotation = 6.27696
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( -78, -380 )
-frame = 0
+frame = 3
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -421, -284 )

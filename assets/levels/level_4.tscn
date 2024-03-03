@@ -65,7 +65,6 @@ rotation = 6.30735
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( 1098, -626 )
 scale = Vector2( 0.128704, 0.106481 )
-frame = 2
 
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
 position = Vector2( -845, -199 )
@@ -80,6 +79,14 @@ position = Vector2( 113, 358 )
 
 [node name="LeakArea" parent="MemoryLeak" index="0"]
 position = Vector2( 1327, -891 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -112.0
+margin_top = 60.0
+margin_right = -37.0
+margin_bottom = 74.0
+rect_scale = Vector2( 2.36, 1.96 )
+text = "R to restart!"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 417, -951 )
