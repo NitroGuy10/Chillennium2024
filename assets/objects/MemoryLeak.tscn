@@ -20,7 +20,7 @@ frame_2/texture = ExtResource( 8 )
 frame_2/delay_sec = 0.0
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 128.939, 100.713 )
+extents = Vector2( 113.477, 51.1236 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27, 25 )
