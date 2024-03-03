@@ -8,7 +8,7 @@
 [node name="test_level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1228, -28 )
+position = Vector2( -1042, -515 )
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 position = Vector2( -4, 411 )
@@ -48,6 +48,13 @@ scale = Vector2( 3.36, 1 )
 position = Vector2( 1171, -346 )
 next_tscn = "res://assets/levels/level_2.tscn"
 
+[node name="Label" type="Label" parent="."]
+margin_left = -627.0
+margin_top = -235.0
+margin_right = -533.0
+margin_bottom = -221.0
+rect_scale = Vector2( 5.08772, 5.30363 )
+text = "Space to Hang!"
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1225, -33 )
 level_tscn = "res://assets/levels/level_1.tscn"

@@ -45,7 +45,7 @@ scale = Vector2( 3.95793, 0.633106 )
 position = Vector2( 768, -250 )
 
 [node name="LeakArea" parent="MemoryLeak" index="0"]
-position = Vector2( 887, -163 )
+position = Vector2( -422, 588 )
 scale = Vector2( 2.56, 10.7271 )
 
 [node name="Sprite" parent="MemoryLeak/LeakArea" index="0"]
@@ -59,11 +59,22 @@ position = Vector2( -315, -16 )
 introduceSelf = true
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1151, 247 )
+position = Vector2( 15, 294 )
 scale = Vector2( 2.28, 2.2886 )
 next_tscn = "res://assets/levels/level_3.tscn"
 
+[node name="Label" type="Label" parent="."]
+margin_left = 549.0
+margin_top = -571.0
+margin_right = 717.0
+margin_bottom = -437.0
+rect_scale = Vector2( 2.48, 2.4 )
+text = "Connect memory leaks to 
+garbage collectors!"
+align = 1
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
+position = Vector2( -39, 17 )
 level_tscn = "res://assets/levels/level_2.tscn"
 
 [editable path="MemoryLeak"]

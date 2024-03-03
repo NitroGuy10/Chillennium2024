@@ -76,6 +76,7 @@ rotation = 6.27696
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( -78, -380 )
+frame = 2
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -421, -284 )
@@ -89,10 +90,27 @@ rotation = -0.00848891
 position = Vector2( -1192, -477 )
 next_tscn = "res://assets/levels/level_4.tscn"
 
+[node name="Label" type="Label" parent="."]
+margin_left = -969.0
+margin_top = -283.0
+margin_right = -815.0
+margin_bottom = -269.0
+rect_scale = Vector2( 1.90964, 2.2 )
+text = "Hang through live wires!"
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -250.0
+margin_top = -22.0
+margin_right = -8.0
+margin_bottom = -8.0
+rect_scale = Vector2( 1.92, 2.25901 )
+text = "Use pointers to drop your RAM usage!"
+align = 1
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2655, -122 )
 max_ram = 3000
-background_number = "2"
 level_tscn = "res://assets/levels/level_3.tscn"
 
 [editable path="MemoryLeak"]

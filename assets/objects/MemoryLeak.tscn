@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sprites/pylon/Start Pole.PNG" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 83.3335, 32.3635 )
+extents = Vector2( 112.956, 49.7416 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27, 25 )

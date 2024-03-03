@@ -109,5 +109,4 @@ position = Vector2( -706, -312 )
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1792, -1165 )
 max_ram = 4200
-background_number = "4"
 level_tscn = "res://assets/levels/level_7.tscn"
