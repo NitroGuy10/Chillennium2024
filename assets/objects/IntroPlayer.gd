@@ -61,5 +61,6 @@ func _process(delta):
 
 func _on_Timer_timeout():
 	$PKB.hanging = true
+	get_parent().get_parent().force_hang = true
 	get_parent().get_node("GameCamera").force_arbitrary_drain_speed_lerp = true
 	stopping = true

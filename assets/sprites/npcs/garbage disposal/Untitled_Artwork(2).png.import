@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled_Artwork(2).PNG-d538d5644133eb111e123d5fd275ac48.stex"
+path="res://.import/Untitled_Artwork(2).png-1a0c2d5b829ff651801280ca0b6522c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(2).PNG"
-dest_files=[ "res://.import/Untitled_Artwork(2).PNG-d538d5644133eb111e123d5fd275ac48.stex" ]
+source_file="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(2).png"
+dest_files=[ "res://.import/Untitled_Artwork(2).png-1a0c2d5b829ff651801280ca0b6522c4.stex" ]
 
 [params]
 
