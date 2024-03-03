@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
@@ -6,10 +6,13 @@
 [ext_resource path="res://assets/objects/GarbageCollector.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/objects/MemoryLeak.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/objects/LeakCheckpoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/sprites/platforms/pinkone.PNG" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/black.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/platforms/border assets/border square 1.png" type="Texture" id=9]
 [ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=10]
 
 [node name="test_level2" type="Node2D"]
-position = Vector2( 4, -2 )
+position = Vector2( 4, -4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1225, 314 )
@@ -59,12 +62,12 @@ position = Vector2( -1135, 313 )
 position = Vector2( 1153, -607 )
 
 [node name="LeakCheckpoint" parent="GarbageCollector" index="1"]
-position = Vector2( 1151, -743 )
+position = Vector2( 1121, -661 )
 rotation = 6.30735
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
-position = Vector2( 1098, -626 )
-scale = Vector2( 0.128704, 0.106481 )
+position = Vector2( 1089.5, -617.5 )
+scale = Vector2( 0.485455, 0.365455 )
 
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
 position = Vector2( -845, -199 )
@@ -91,7 +94,245 @@ text = "R to restart!"
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 417, -951 )
 max_ram = 4200
+background_number = "2"
 level_tscn = "res://assets/levels/level_4.tscn"
+
+[node name="Pinkone" type="Sprite" parent="."]
+position = Vector2( -1240, 61 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone2" type="Sprite" parent="."]
+position = Vector2( -1152, 62 )
+rotation = 1.56599
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone3" type="Sprite" parent="."]
+position = Vector2( -1063, 62 )
+rotation = -1.57541
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone4" type="Sprite" parent="."]
+position = Vector2( -974, 61 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone6" type="Sprite" parent="."]
+position = Vector2( -696, -200 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone7" type="Sprite" parent="."]
+position = Vector2( -605, -201 )
+rotation = 1.55588
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone30" type="Sprite" parent="."]
+position = Vector2( -278, 138 )
+rotation = 1.55588
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone31" type="Sprite" parent="."]
+position = Vector2( 235, 215 )
+rotation = 1.55588
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone32" type="Sprite" parent="."]
+position = Vector2( 237, 309 )
+rotation = 1.55588
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone33" type="Sprite" parent="."]
+position = Vector2( 239, 402 )
+rotation = 1.55588
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone8" type="Sprite" parent="."]
+position = Vector2( -513, -201 )
+rotation = 1.55021
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone9" type="Sprite" parent="."]
+position = Vector2( -421, -200 )
+rotation = 0.0013793
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone10" type="Sprite" parent="."]
+position = Vector2( -332, -201 )
+rotation = 4.71867
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone11" type="Sprite" parent="."]
+position = Vector2( -240, -200 )
+rotation = 4.70273
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone12" type="Sprite" parent="."]
+position = Vector2( -149, -201 )
+rotation = 6.28737
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone13" type="Sprite" parent="."]
+position = Vector2( -59, -201 )
+rotation = 1.58068
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone14" type="Sprite" parent="."]
+position = Vector2( 32, -200 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone15" type="Sprite" parent="."]
+position = Vector2( 126, -205 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone21" type="Sprite" parent="."]
+position = Vector2( 127, -122 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone22" type="Sprite" parent="."]
+position = Vector2( 126, -45 )
+rotation = 4.72259
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone23" type="Sprite" parent="."]
+position = Vector2( 220, -201 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone24" type="Sprite" parent="."]
+position = Vector2( 312, -201 )
+rotation = 0.017452
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone25" type="Sprite" parent="."]
+position = Vector2( 404, -202 )
+rotation = 1.55989
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone26" type="Sprite" parent="."]
+position = Vector2( 496, -201 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone27" type="Sprite" parent="."]
+position = Vector2( 586, -201 )
+rotation = 0.00924563
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone28" type="Sprite" parent="."]
+position = Vector2( 677, -201 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone29" type="Sprite" parent="."]
+position = Vector2( 677, -201 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone16" type="Sprite" parent="."]
+position = Vector2( 126, -293 )
+rotation = 1.56669
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone17" type="Sprite" parent="."]
+position = Vector2( 126, -385 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone18" type="Sprite" parent="."]
+position = Vector2( 127, -478 )
+rotation = 4.71482
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone19" type="Sprite" parent="."]
+position = Vector2( 127, -568 )
+rotation = 3.1468
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone20" type="Sprite" parent="."]
+position = Vector2( 127, -569 )
+rotation = 4.73689
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Pinkone5" type="Sprite" parent="."]
+position = Vector2( -893, 64 )
+rotation = 0.00301253
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="BorderSquare1" type="Sprite" parent="."]
+position = Vector2( -50, 757 )
+scale = Vector2( 13.36, 2.28 )
+texture = ExtResource( 9 )
+
+[node name="BorderSquare2" type="Sprite" parent="."]
+position = Vector2( 27, -1008 )
+scale = Vector2( 13.36, 2.28 )
+texture = ExtResource( 9 )
+
+[node name="BorderSquare3" type="Sprite" parent="."]
+position = Vector2( -3121, -174 )
+scale = Vector2( 7.27898, -4.83977 )
+texture = ExtResource( 9 )
+
+[node name="BorderSquare4" type="Sprite" parent="."]
+position = Vector2( 3084, -128 )
+scale = Vector2( 7.27898, -4.83977 )
+texture = ExtResource( 9 )
+
+[node name="Black" type="Sprite" parent="."]
+position = Vector2( -22, 450 )
+scale = Vector2( 29.04, 1 )
+texture = ExtResource( 8 )
+
+[node name="Black2" type="Sprite" parent="."]
+position = Vector2( -27, -705 )
+scale = Vector2( 29.04, 1 )
+texture = ExtResource( 8 )
+
+[node name="Black3" type="Sprite" parent="."]
+position = Vector2( -1422, -130 )
+scale = Vector2( 1.12, 12.52 )
+texture = ExtResource( 8 )
+
+[node name="Black4" type="Sprite" parent="."]
+position = Vector2( 1371, -133 )
+scale = Vector2( 1.12, 12.52 )
+texture = ExtResource( 8 )
 
 [editable path="GarbageCollector"]
 [editable path="GarbageCollector/LeakCheckpoint"]

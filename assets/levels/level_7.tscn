@@ -114,14 +114,14 @@ position = Vector2( 2210, -917 )
 
 [node name="CollisionShape2D" parent="MemoryLeak/LeakArea" index="1"]
 position = Vector2( -63.2812, -1.1236 )
-scale = Vector2( 1, 1 )
 
 [node name="GarbageCollector" parent="." instance=ExtResource( 7 )]
 position = Vector2( 82, -410 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1792, -1165 )
+position = Vector2( -1007, 265 )
 max_ram = 4200
+background_number = "4"
 level_tscn = "res://assets/levels/level_7.tscn"
 
 [node name="LeakCheckpoint" parent="." instance=ExtResource( 8 )]

@@ -58,8 +58,8 @@ position = Vector2( -2, -3 )
 shape = SubResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="PylonArea"]
-position = Vector2( 21, 48 )
-scale = Vector2( 0.119998, 0.120001 )
+position = Vector2( 14, 54.0434 )
+scale = Vector2( 1.28737, 0.979566 )
 texture = ExtResource( 5 )
 
 [node name="Line2D" type="Line2D" parent="."]

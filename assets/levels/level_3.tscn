@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
@@ -7,9 +7,12 @@
 [ext_resource path="res://assets/objects/MemoryLeak.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/objects/LeakCheckpoint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/platforms/border assets/border square 1.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/black.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/platforms/IMG_0112.PNG" type="Texture" id=11]
 
 [node name="test_level" type="Node2D"]
-position = Vector2( 4, -2 )
+position = Vector2( 21, -88 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1080, -13 )
@@ -31,8 +34,8 @@ position = Vector2( 0, -653 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 424, 70 )
-scale = Vector2( 2.32, 1 )
+position = Vector2( 406, 69 )
+scale = Vector2( 1.96, 1 )
 
 [node name="Platform10" parent="." instance=ExtResource( 2 )]
 position = Vector2( 106, 223 )
@@ -49,8 +52,12 @@ position = Vector2( 621, -71 )
 position = Vector2( -423, -129 )
 
 [node name="Platform6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 123, -209 )
-scale = Vector2( 5.67793, 0.633106 )
+position = Vector2( 133, -208 )
+scale = Vector2( 5.47793, 0.633106 )
+
+[node name="Portal" parent="." instance=ExtResource( 7 )]
+position = Vector2( -1180, -501 )
+next_tscn = "res://assets/levels/level_4.tscn"
 
 [node name="MemoryLeak" parent="." instance=ExtResource( 5 )]
 position = Vector2( 449, 13 )
@@ -68,15 +75,15 @@ position = Vector2( -1014.84, -38.4074 )
 scale = Vector2( 0.456805, 0.282145 )
 
 [node name="GarbageCollector" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1135, 313 )
+position = Vector2( -1117, 391 )
 
 [node name="LeakCheckpoint" parent="GarbageCollector" index="1"]
 position = Vector2( -41, -461 )
 rotation = 6.27696
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
-position = Vector2( -78, -380 )
-frame = 3
+position = Vector2( -62, -431 )
+frame = 0
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -421, -284 )
@@ -85,10 +92,6 @@ rotation = -0.00848891
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 136, -345 )
 rotation = -0.00848891
-
-[node name="Portal" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1192, -477 )
-next_tscn = "res://assets/levels/level_4.tscn"
 
 [node name="Label" type="Label" parent="."]
 margin_left = -969.0
@@ -108,9 +111,203 @@ rect_scale = Vector2( 1.92, 2.25901 )
 text = "Use pointers to drop your RAM usage!"
 align = 1
 
+[node name="Img0112" type="Sprite" parent="."]
+position = Vector2( -1268, 71 )
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+
+[node name="Img0114" type="Sprite" parent="."]
+position = Vector2( -1189, 71 )
+rotation = 1.58329
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+
+[node name="Img0115" type="Sprite" parent="."]
+position = Vector2( -1111, 72 )
+rotation = 1.58329
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+
+[node name="Img0116" type="Sprite" parent="."]
+position = Vector2( -1032, 73 )
+rotation = 1.58329
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+
+[node name="Img0117" type="Sprite" parent="."]
+position = Vector2( -872, 74 )
+rotation = 1.58329
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+
+[node name="Img0119" type="Sprite" parent="."]
+position = Vector2( -422.586, -129.39 )
+rotation = 4.72132
+scale = Vector2( 0.311595, 0.345057 )
+texture = ExtResource( 11 )
+
+[node name="Img0121" type="Sprite" parent="."]
+position = Vector2( -95, 222 )
+rotation = 4.72132
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0122" type="Sprite" parent="."]
+position = Vector2( 3, 223 )
+rotation = 6.28436
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0123" type="Sprite" parent="."]
+position = Vector2( 99, 224 )
+rotation = 4.72132
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0124" type="Sprite" parent="."]
+position = Vector2( 196, 223 )
+rotation = 7.84386
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0125" type="Sprite" parent="."]
+position = Vector2( 294, 224 )
+rotation = 7.84386
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0126" type="Sprite" parent="."]
+position = Vector2( 358, 69 )
+rotation = 7.84386
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0127" type="Sprite" parent="."]
+position = Vector2( 358, 69 )
+rotation = 7.84386
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0128" type="Sprite" parent="."]
+position = Vector2( 455, 69 )
+rotation = 6.27645
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0129" type="Sprite" parent="."]
+position = Vector2( 621, -71 )
+rotation = 6.27645
+scale = Vector2( 0.331, 0.331 )
+texture = ExtResource( 11 )
+
+[node name="Img0130" type="Sprite" parent="."]
+position = Vector2( 375, -209 )
+rotation = 6.27645
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+
+[node name="Img0131" type="Sprite" parent="."]
+position = Vector2( 316, -209 )
+rotation = 4.71246
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+
+[node name="Img0132" type="Sprite" parent="."]
+position = Vector2( 255, -209 )
+rotation = 6.28152
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+
+[node name="Img0133" type="Sprite" parent="."]
+position = Vector2( 193, -209 )
+rotation = 3.13832
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+
+[node name="Img0134" type="Sprite" parent="."]
+position = Vector2( 132, -209 )
+rotation = 4.71246
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+
+[node name="Img0135" type="Sprite" parent="."]
+position = Vector2( 72.4356, -210.593 )
+rotation = 4.71246
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+offset = Vector2( -7.69678, -11.7655 )
+
+[node name="Img0136" type="Sprite" parent="."]
+position = Vector2( 6, -208 )
+rotation = 1.57357
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+offset = Vector2( -7.69678, -11.7655 )
+
+[node name="Img0137" type="Sprite" parent="."]
+position = Vector2( -54, -208 )
+rotation = 1.57357
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+offset = Vector2( -7.69678, -11.7655 )
+
+[node name="Img0138" type="Sprite" parent="."]
+position = Vector2( -116, -208 )
+rotation = 1.57357
+scale = Vector2( 0.207, 0.207 )
+texture = ExtResource( 11 )
+offset = Vector2( -7.69678, -11.7655 )
+
+[node name="Img0118" type="Sprite" parent="."]
+position = Vector2( -953, 73 )
+rotation = 1.58329
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+
+[node name="BorderSquare1" type="Sprite" parent="."]
+position = Vector2( -7, 843 )
+scale = Vector2( 11, 2.76 )
+texture = ExtResource( 8 )
+
+[node name="BorderSquare3" type="Sprite" parent="."]
+position = Vector2( -1926, -124 )
+scale = Vector2( 2.56, 3.6 )
+texture = ExtResource( 8 )
+
+[node name="BorderSquare4" type="Sprite" parent="."]
+position = Vector2( 1888, -94 )
+scale = Vector2( 2.56, 3.6 )
+texture = ExtResource( 8 )
+
+[node name="BorderSquare2" type="Sprite" parent="."]
+position = Vector2( 5, -1086 )
+scale = Vector2( 11, 2.76 )
+texture = ExtResource( 8 )
+
+[node name="Black" type="Sprite" parent="."]
+position = Vector2( -20, 449 )
+scale = Vector2( 27.88, 1 )
+texture = ExtResource( 9 )
+
+[node name="Black2" type="Sprite" parent="."]
+position = Vector2( -34, -692 )
+scale = Vector2( 27.88, 1 )
+texture = ExtResource( 9 )
+
+[node name="Black3" type="Sprite" parent="."]
+position = Vector2( -1380, -121 )
+scale = Vector2( 1, 12.44 )
+texture = ExtResource( 9 )
+
+[node name="Black4" type="Sprite" parent="."]
+position = Vector2( 1325, -117 )
+scale = Vector2( 1, 12.44 )
+texture = ExtResource( 9 )
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2655, -122 )
+position = Vector2( 2923, -165 )
 max_ram = 3000
+background_number = "2"
 level_tscn = "res://assets/levels/level_3.tscn"
 
 [editable path="MemoryLeak"]
