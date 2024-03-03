@@ -8,9 +8,10 @@ const followBuffer = 200
 
 const lerpSpeed = 0.9
 
-var drain_speed_lerp = 9999
+var drain_speed_lerp = 999
 var death_cycle = 0
 var player
+var fading_to_black = false
 
 export var level_tscn = "res://assets/levels/test_level.tscn"
 var level_scene
@@ -35,8 +36,8 @@ func _physics_process(delta):
 	if player.dead:
 		drain_speed_lerp += 50000 * delta
 	
-	if death_cycle > 2:
-		$BlackScreen.color.a += 10 * delta
+	if fading_to_black:
+		$BlackScreen.color.a = min(5, $BlackScreen.color.a + (10 * delta))
 	else:
 		$BlackScreen.color.a = max(0, $BlackScreen.color.a - (10 * delta))
 	
@@ -44,8 +45,8 @@ func _physics_process(delta):
 		$Shake.position.x = randf() * (draining_speed / 100)   
 		$Shake.position.y = randf() * (draining_speed / 100)
 	
-	$GlitchFX.material.set_shader_param("abberationAmtX", 0.003 + (0.01 * ram_percent) + (0.00001 * drain_speed_lerp))
-	$GlitchFX.material.set_shader_param("abberationAmtY", 0.001 + (0.01 * ram_percent) + (0.00001 * drain_speed_lerp))
+	$GlitchFX.material.set_shader_param("abberationAmtX", 0.000 + (0.01 * ram_percent) + (0.00001 * drain_speed_lerp))
+	$GlitchFX.material.set_shader_param("abberationAmtY", 0.000 + (0.01 * ram_percent) + (0.00001 * drain_speed_lerp))
 	$GlitchFX.material.set_shader_param("dispAmt", (0.003 * ram_percent) + (0.00001 * drain_speed_lerp))
 
 	if player.dead and $DeathTimer.is_stopped():
@@ -72,6 +73,7 @@ func _on_BlackBlinkTimer_timeout():
 
 func _on_DeathTimer_timeout():
 	if death_cycle == 2:
+		fading_to_black = true
 #		$Blinking.visible = true
 		pass
 	elif death_cycle == 3:

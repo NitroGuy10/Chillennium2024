@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/objects/Meter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/sprites/dispCRAZY.png" type="Texture" id=4]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 render_mode unshaded;
 
@@ -28,7 +28,7 @@ void fragment ()
 }"
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = SubResource( 3 )
 shader_param/dispAmt = 0.0
 shader_param/abberationAmtX = 0.003
 shader_param/abberationAmtY = 0.002
@@ -77,10 +77,10 @@ wait_time = 0.05
 autostart = true
 
 [node name="BlackScreen" type="ColorRect" parent="."]
-margin_left = -682.0
-margin_top = -458.0
-margin_right = 650.0
-margin_bottom = 375.0
+margin_left = -998.0
+margin_top = -710.0
+margin_right = 936.0
+margin_bottom = 621.0
 color = Color( 0, 0, 0, 0 )
 
 [node name="StartTimer" type="Timer" parent="."]
