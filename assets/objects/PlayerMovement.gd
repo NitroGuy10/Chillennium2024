@@ -9,6 +9,7 @@ var velocity = Vector2()
 
 var player
 var clipping = false
+var winning = false
 
 var kill_timer = preload("res://assets/objects/KillTimer.tscn")
 
@@ -52,7 +53,9 @@ func _physics_process(delta):
 		else:
 			velocity.y = 0
 		
-		if clipping:
+		if winning:
+			$AnimatedSprite.animation = "win"
+		elif clipping:
 			$AnimatedSprite.animation = "clip"
 		else:
 			if abs(velocity.x) < 15:
@@ -77,7 +80,11 @@ func _physics_process(delta):
 		pass
 		
 	
-	if clipping:
+	if winning:
+		$AnimatedSprite.animation = "win"
+		$AnimatedSprite.scale.x = max($AnimatedSprite.scale.x - (5 * delta), 0)
+		$AnimatedSprite.scale.y = max($AnimatedSprite.scale.y - (5 * delta), 0)
+	elif clipping:
 		$AnimatedSprite.animation = "clip"
 	else:
 		if velocity.y < -30:
