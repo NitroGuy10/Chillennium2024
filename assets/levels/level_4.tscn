@@ -68,6 +68,7 @@ rotation = 6.30735
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( 1089.5, -617.5 )
 scale = Vector2( 0.485455, 0.365455 )
+frame = 2
 
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
 position = Vector2( -845, -199 )
@@ -91,12 +92,6 @@ margin_bottom = 74.0
 rect_scale = Vector2( 2.36, 1.96 )
 text = "R to restart!"
 
-[node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 417, -951 )
-max_ram = 4200
-background_number = "2"
-level_tscn = "res://assets/levels/level_4.tscn"
-
 [node name="Pinkone" type="Sprite" parent="."]
 position = Vector2( -1240, 61 )
 scale = Vector2( 0.3, 0.3 )
@@ -116,13 +111,13 @@ texture = ExtResource( 7 )
 
 [node name="Pinkone4" type="Sprite" parent="."]
 position = Vector2( -974, 61 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone6" type="Sprite" parent="."]
 position = Vector2( -696, -200 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
@@ -170,19 +165,19 @@ texture = ExtResource( 7 )
 
 [node name="Pinkone10" type="Sprite" parent="."]
 position = Vector2( -332, -201 )
-rotation = 4.71867
+rotation = -1.56452
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone11" type="Sprite" parent="."]
 position = Vector2( -240, -200 )
-rotation = 4.70273
+rotation = -1.58046
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone12" type="Sprite" parent="."]
 position = Vector2( -149, -201 )
-rotation = 6.28737
+rotation = 0.00418251
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
@@ -194,31 +189,31 @@ texture = ExtResource( 7 )
 
 [node name="Pinkone14" type="Sprite" parent="."]
 position = Vector2( 32, -200 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone15" type="Sprite" parent="."]
 position = Vector2( 126, -205 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone21" type="Sprite" parent="."]
 position = Vector2( 127, -122 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone22" type="Sprite" parent="."]
 position = Vector2( 126, -45 )
-rotation = 4.72259
+rotation = -1.5606
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone23" type="Sprite" parent="."]
 position = Vector2( 220, -201 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
@@ -236,7 +231,7 @@ texture = ExtResource( 7 )
 
 [node name="Pinkone26" type="Sprite" parent="."]
 position = Vector2( 496, -201 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
@@ -248,13 +243,13 @@ texture = ExtResource( 7 )
 
 [node name="Pinkone28" type="Sprite" parent="."]
 position = Vector2( 677, -201 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone29" type="Sprite" parent="."]
 position = Vector2( 677, -201 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
@@ -266,25 +261,25 @@ texture = ExtResource( 7 )
 
 [node name="Pinkone17" type="Sprite" parent="."]
 position = Vector2( 126, -385 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone18" type="Sprite" parent="."]
 position = Vector2( 127, -478 )
-rotation = 4.71482
+rotation = -1.56836
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone19" type="Sprite" parent="."]
 position = Vector2( 127, -568 )
-rotation = 3.1468
+rotation = -3.13639
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
 [node name="Pinkone20" type="Sprite" parent="."]
 position = Vector2( 127, -569 )
-rotation = 4.73689
+rotation = -1.54629
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 
@@ -333,6 +328,12 @@ texture = ExtResource( 8 )
 position = Vector2( 1371, -133 )
 scale = Vector2( 1.12, 12.52 )
 texture = ExtResource( 8 )
+
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
+position = Vector2( 417, -951 )
+max_ram = 4200
+background_number = "2"
+level_tscn = "res://assets/levels/level_4.tscn"
 
 [editable path="GarbageCollector"]
 [editable path="GarbageCollector/LeakCheckpoint"]

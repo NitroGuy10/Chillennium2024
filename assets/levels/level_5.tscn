@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
@@ -7,8 +7,12 @@
 [ext_resource path="res://assets/objects/LeakCheckpoint.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/objects/GarbageCollector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/objects/MemoryLeak.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/platforms/border assets/border square 2.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/black.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/platforms/pinkone.PNG" type="Texture" id=10]
 
 [node name="test_level2" type="Node2D"]
+position = Vector2( -404, 181 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1222, -482 )
@@ -60,9 +64,88 @@ next_tscn = "res://assets/levels/level_2.tscn"
 [node name="GarbageCollector" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1199, 269 )
 
+[node name="LeakCheckpoint" parent="GarbageCollector" index="1"]
+position = Vector2( 54, -10 )
+
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
+position = Vector2( 25, 17 )
 z_index = 1
-frame = 1
+frame = 2
+
+[node name="Pinkone" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 505, -102 )
+rotation = -1.56179
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone2" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 598, -103 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone3" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 690, -104 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone9" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1793, -116 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone10" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1817, -419 )
+rotation = -0.00680399
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone11" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 1914, -594 )
+rotation = 3.12102
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone12" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 2152, -638 )
+rotation = -1.56686
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone13" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 2230, -635 )
+rotation = 1.57899
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone4" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 782, -104 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone5" type="Sprite" parent="GarbageCollector"]
+position = Vector2( -43, -656 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone6" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 48, -657 )
+rotation = -1.56103
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone7" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 138, -657 )
+rotation = -1.58032
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="Pinkone8" type="Sprite" parent="GarbageCollector"]
+position = Vector2( 231, -657 )
+rotation = 3.14046
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
 
 [node name="MemoryLeak" parent="." instance=ExtResource( 7 )]
 position = Vector2( 975, -399 )
@@ -75,7 +158,28 @@ position = Vector2( -46.0937, 50.2809 )
 scale = Vector2( 2.60546, 2.01124 )
 
 [node name="CollisionShape2D" parent="MemoryLeak/LeakArea" index="1"]
-position = Vector2( -64.4531, 51.7444 )
+position = Vector2( -44.9219, 50.5618 )
+scale = Vector2( 1, 1 )
+
+[node name="BorderSquare2" type="Sprite" parent="."]
+position = Vector2( 42, 759 )
+scale = Vector2( 13.8, 2.24 )
+texture = ExtResource( 8 )
+
+[node name="BorderSquare3" type="Sprite" parent="."]
+position = Vector2( 78, -1002 )
+scale = Vector2( 13.8, 2.24 )
+texture = ExtResource( 8 )
+
+[node name="BorderSquare4" type="Sprite" parent="."]
+position = Vector2( -1725, -127 )
+scale = Vector2( 2.48, 3.16059 )
+texture = ExtResource( 8 )
+
+[node name="BorderSquare5" type="Sprite" parent="."]
+position = Vector2( 1688, -117 )
+scale = Vector2( 2.48, 3.16059 )
+texture = ExtResource( 8 )
 
 [node name="LeakCheckpoint" parent="." instance=ExtResource( 5 )]
 position = Vector2( 584, -301 )
@@ -89,7 +193,28 @@ position = Vector2( -45, 258 )
 [node name="LeakCheckpoint4" parent="." instance=ExtResource( 5 )]
 position = Vector2( -548, 16 )
 
+[node name="Black" type="Sprite" parent="."]
+position = Vector2( -39, 465 )
+scale = Vector2( 27.92, 1 )
+texture = ExtResource( 9 )
+
+[node name="Black2" type="Sprite" parent="."]
+position = Vector2( -21, -728 )
+scale = Vector2( 27.92, 1 )
+texture = ExtResource( 9 )
+
+[node name="Black3" type="Sprite" parent="."]
+position = Vector2( -1371, -130 )
+scale = Vector2( 0.92, 12.8 )
+texture = ExtResource( 9 )
+
+[node name="Black4" type="Sprite" parent="."]
+position = Vector2( 1338, -132 )
+scale = Vector2( 0.92, 12.8 )
+texture = ExtResource( 9 )
+
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1, -400 )
 max_ram = 7000
 background_number = "3"
 level_tscn = "res://assets/levels/level_5.tscn"
