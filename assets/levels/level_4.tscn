@@ -108,6 +108,9 @@ position = Vector2( 1153, -607 )
 position = Vector2( 1148, -694 )
 rotation = 6.2426
 
+[node name="AnimatedSprite" parent="GarbageCollector" index="3"]
+frame = 3
+
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
 position = Vector2( -796, -186 )
 rotation = -1.5496
@@ -115,6 +118,7 @@ rotation = -1.5496
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( -584, 900 )
 max_ram = 4200
+background_tres = "2"
 level_tscn = "res://assets/levels/level_4.tscn"
 
 [connection signal="area_entered" from="MemoryLeak/LeakArea" to="MemoryLeak" method="_on_LeakArea_area_entered"]
