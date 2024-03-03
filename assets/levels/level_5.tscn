@@ -70,7 +70,7 @@ position = Vector2( 54, -10 )
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( 25, 17 )
 z_index = 1
-frame = 2
+frame = 3
 
 [node name="Pinkone" type="Sprite" parent="GarbageCollector"]
 position = Vector2( 505, -102 )
