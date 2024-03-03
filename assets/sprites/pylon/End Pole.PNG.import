@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/End Pole.png-0f63c1f2f37f002620458e974556ae9f.stex"
+path="res://.import/End Pole.PNG-829ac587a4f29da473c547a80d3267bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pylon/End Pole.png"
-dest_files=[ "res://.import/End Pole.png-0f63c1f2f37f002620458e974556ae9f.stex" ]
+source_file="res://assets/sprites/pylon/End Pole.PNG"
+dest_files=[ "res://.import/End Pole.PNG-829ac587a4f29da473c547a80d3267bf.stex" ]
 
 [params]
 

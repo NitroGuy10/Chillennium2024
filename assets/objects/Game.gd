@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 
 var end = false
+var force_hang = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,6 +20,6 @@ func _process(delta):
 		get_node("Music").volume_db -= 10 * delta
 		get_node("GlitchMusic").volume_db -= 10 * delta
 	else:
-		var hanging = Input.is_action_pressed("ui_select")
+		var hanging = Input.is_action_pressed("ui_select") || force_hang
 		get_node("Music").volume_db = 0 if !hanging else -80
 		get_node("GlitchMusic").volume_db = 0 if hanging else -80

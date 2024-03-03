@@ -17,6 +17,7 @@ func _ready():
 func _process(delta):
 	if ready_to_go and Input.is_action_just_pressed("ui_select"):
 		get_parent().get_node("DeathTimer").start()
+		get_parent().get_parent().get_parent().force_hang = false
 
 
 func _on_Timer_timeout():
