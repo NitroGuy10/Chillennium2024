@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=36 format=2]
+[gd_resource type="SpriteFrames" load_steps=39 format=2]
 
 [ext_resource path="res://assets/sprites/backgrounds/background 1 frames/background1.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/backgrounds/background 1 frames/background306.png" type="Texture" id=2]
@@ -35,9 +35,17 @@
 [ext_resource path="res://assets/sprites/backgrounds/bg4/IMG_0106.PNG" type="Texture" id=33]
 [ext_resource path="res://assets/sprites/backgrounds/bg4/IMG_0102.PNG" type="Texture" id=34]
 [ext_resource path="res://assets/sprites/backgrounds/bg4/IMG_0104.PNG" type="Texture" id=35]
+[ext_resource path="res://assets/sprites/backgrounds/leak.png" type="Texture" id=36]
+[ext_resource path="res://assets/sprites/backgrounds/leak3.png" type="Texture" id=37]
+[ext_resource path="res://assets/sprites/backgrounds/leak2.png" type="Texture" id=38]
 
 [resource]
 animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 38 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "0",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "1",
