@@ -13,14 +13,9 @@ var death_cycle = 0
 var player
 var fading_to_black = false
 
-export var background_tres = "1"
+export var background_number = "1"
 export var level_tscn = "res://assets/levels/test_level.tscn"
 var level_scene
-
-const bg_speeds = {
-	"1": 0.5,
-	"2": 1.3
-}
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,12 +26,10 @@ func _ready():
 #	$Blinking.visible = true
 	$BlackScreen.color.a = 3
 	
-	var bg_frames = load("res://assets/spriteframes/backgrounds/" + background_tres + ".tres")
 	for i in range(1, 4):
 #		$Background/bg1.spe = 
 		var background = get_node("Background/bg" + str(i))
-		background.frames = bg_frames
-		background.speed_scale = bg_speeds[background_tres]
+		background.animation = background_number
 
 
 func _physics_process(delta):

@@ -81,13 +81,14 @@ scale = Vector2( 4.36991, 0.907405 )
 position = Vector2( -176, 326 )
 scale = Vector2( 2.17119, 0.859783 )
 
-[node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 199, -924 )
-max_ram = 4200
-level_tscn = "res://assets/levels/level_6.tscn"
-
 [node name="Bug5" parent="." instance=ExtResource( 5 )]
 position = Vector2( -462, 309 )
 
 [node name="Bug6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 319, -346 )
+
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
+position = Vector2( 199, -924 )
+max_ram = 4200
+background_number = "3"
+level_tscn = "res://assets/levels/level_6.tscn"

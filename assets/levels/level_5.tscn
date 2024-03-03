@@ -50,4 +50,5 @@ next_tscn = "res://assets/levels/level_2.tscn"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1225, -33 )
+background_number = "3"
 level_tscn = "res://assets/levels/level_1.tscn"

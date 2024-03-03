@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/objects/GameCamera.gd" type="Script" id=1]
 [ext_resource path="res://assets/objects/Meter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/spriteframes/backgrounds/1.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://assets/sprites/dispCRAZY.png" type="Texture" id=4]
-[ext_resource path="res://assets/spriteframes/backgrounds/2.tres" type="SpriteFrames" id=5]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -47,15 +46,17 @@ z_index = -4096
 position = Vector2( -10, -11 )
 scale = Vector2( 1.79204, 1.67204 )
 frames = ExtResource( 3 )
-frame = 1
+animation = "3"
+frame = 3
 speed_scale = 0.5
 playing = true
 
 [node name="bg2" type="AnimatedSprite" parent="Background"]
 position = Vector2( -1445, -1318 )
 scale = Vector2( 1.79204, 1.67204 )
-frames = ExtResource( 5 )
-frame = 8
+frames = ExtResource( 3 )
+animation = "1"
+frame = 5
 speed_scale = 0.5
 playing = true
 offset = Vector2( -51.8961, 781.68 )
@@ -65,6 +66,8 @@ flip_h = true
 position = Vector2( 1426, -1318 )
 scale = Vector2( 1.79204, 1.67204 )
 frames = ExtResource( 3 )
+animation = "1"
+frame = 5
 speed_scale = 0.5
 playing = true
 offset = Vector2( 51.896, 781.68 )
