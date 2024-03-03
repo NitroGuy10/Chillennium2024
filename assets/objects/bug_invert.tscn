@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/sprites/npcs/monster/Untitled_Artwork(1).png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/npcs/monster/Yellow2.png" type="Texture" id=1]
 [ext_resource path="res://assets/objects/BugMovement_inverted.gd" type="Script" id=2]
 [ext_resource path="res://assets/levels/bug.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/npcs/monster/Untitled_Artwork.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/npcs/monster/Yellow1.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -32,6 +32,7 @@ script = ExtResource( 2 )
 position = Vector2( 3, 3 )
 scale = Vector2( 0.07, 0.07 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="BKB"]
