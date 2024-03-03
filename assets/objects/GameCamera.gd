@@ -1,6 +1,7 @@
 extends Node2D
 
 export var max_ram = 10000
+export var clamping = true
 
 const screenWidth = 1300
 const screenHeight = 800
@@ -9,6 +10,7 @@ const followBuffer = 200
 const lerpSpeed = 0.9
 
 var drain_speed_lerp = 999
+var force_arbitrary_drain_speed_lerp = false
 var death_cycle = 0
 var player
 var fading_to_black = false
@@ -33,9 +35,11 @@ func _ready():
 
 
 func _physics_process(delta):
+	
 	var draining_speed = player.draining_speed()
 	var blend = 1 - pow(0.1, 0.9 * delta)
-	drain_speed_lerp = lerp(drain_speed_lerp, draining_speed, blend)
+	if !force_arbitrary_drain_speed_lerp:
+		drain_speed_lerp = lerp(drain_speed_lerp, draining_speed, blend)
 	
 	var ram_percent = $Meter.ram_used / $Meter.max_ram
 	
@@ -69,8 +73,9 @@ func _process(delta):
 	var blend = 1 - pow(0.1, lerpSpeed * delta)
 	position = lerp(position, player.get_node("PKB").global_position, blend)
 
-	position.x = clamp(position.x, player.get_node("PKB").global_position.x - (screenWidth / 2) + followBuffer, player.get_node("PKB").global_position.x + (screenWidth / 2) - followBuffer)
-	position.y = clamp(position.y, player.get_node("PKB").global_position.y - (screenHeight / 2) + followBuffer, player.get_node("PKB").global_position.y + (screenHeight / 2) - followBuffer)
+	if clamping:
+		position.x = clamp(position.x, player.get_node("PKB").global_position.x - (screenWidth / 2) + followBuffer, player.get_node("PKB").global_position.x + (screenWidth / 2) - followBuffer)
+		position.y = clamp(position.y, player.get_node("PKB").global_position.y - (screenHeight / 2) + followBuffer, player.get_node("PKB").global_position.y + (screenHeight / 2) - followBuffer)
 
 	var blend2 = 1 - pow(0.1, 0.9 * delta)
 	var background_target_pos = player.get_node("PKB").global_position / -10
