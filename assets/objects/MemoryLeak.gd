@@ -48,6 +48,10 @@ func _process(delta):
 	$LeakArea.monitoring = !success
 	$PylonArea.monitoring = !success
 	$LeakArea.visible = !success
+	$Line2D.visible = success or is_connecting
+	
+	if success:
+		$Line2D.texture = load("res://assets/sprites/wire/Wire-effects.png")
 
 #func _physics_process(delta):
 #	for body in $LeakArea.get_overlapping_bodies():
