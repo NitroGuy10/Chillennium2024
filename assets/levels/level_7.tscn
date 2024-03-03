@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/objects/bug.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/objects/bug_invert.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=10]
 
 [node name="test_level" type="Node2D"]
 position = Vector2( 0, -2 )
+
+[node name="Bug8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 461, -502 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1008, 268 )
@@ -46,9 +50,6 @@ position = Vector2( 1209, -524 )
 
 [node name="Bug4" parent="." instance=ExtResource( 4 )]
 position = Vector2( -400, 30 )
-
-[node name="Bug6" parent="." instance=ExtResource( 4 )]
-position = Vector2( -90, -118 )
 
 [node name="Bug5" parent="." instance=ExtResource( 4 )]
 position = Vector2( -1183, 279 )
@@ -103,3 +104,9 @@ scale = Vector2( 1.77119, 0.859783 )
 position = Vector2( -1792, -1165 )
 max_ram = 4200
 level_tscn = "res://assets/levels/level_7.tscn"
+
+[node name="Bug6" parent="." instance=ExtResource( 5 )]
+position = Vector2( -125, -110 )
+
+[node name="Bug9" parent="." instance=ExtResource( 5 )]
+position = Vector2( -706, -312 )

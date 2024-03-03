@@ -1,27 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/objects/GameCamera.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/objects/GarbageCollector.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/sprites/nav.png" type="Texture" id=5]
-[ext_resource path="res://assets/objects/LeakCheckpoint.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/objects/MemoryLeak.gd" type="Script" id=7]
-[ext_resource path="res://assets/sprites/leak.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/leak_pylon.png" type="Texture" id=9]
-[ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=10]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 120.635, 52.3238 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 27, 25 )
+[ext_resource path="res://assets/objects/Portal.tscn" type="PackedScene" id=4]
 
 [node name="test_level" type="Node2D"]
-position = Vector2( 4, -2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1219, -165 )
+position = Vector2( -1228, -28 )
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 position = Vector2( -4, 411 )
@@ -40,112 +27,27 @@ position = Vector2( 0, -653 )
 scale = Vector2( 26.9662, 1 )
 
 [node name="Platform5" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1090, -33 )
-scale = Vector2( 3.8, 1 )
-
-[node name="Platform9" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1095, -365 )
-scale = Vector2( 3.8, 1 )
-
-[node name="Platform7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 908, -228 )
-
-[node name="Platform10" parent="." instance=ExtResource( 2 )]
-position = Vector2( -755, 131 )
-
-[node name="Platform12" parent="." instance=ExtResource( 2 )]
-position = Vector2( -131, -316 )
-scale = Vector2( 0.722227, 6.08 )
-
-[node name="Platform13" parent="." instance=ExtResource( 2 )]
-position = Vector2( 791, 72 )
-scale = Vector2( 1.42969, 6.13439 )
-
-[node name="Platform11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1134, -300 )
+position = Vector2( -778, 316 )
 
 [node name="Platform8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 679, 30 )
+position = Vector2( 461, 60 )
+
+[node name="Platform9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 992, -260 )
+scale = Vector2( 5.15449, -0.334623 )
 
 [node name="Platform6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 523, 260 )
+position = Vector2( -397, 236 )
 scale = Vector2( 3.95793, 0.633106 )
 
-[node name="MemoryLeak" type="Node2D" parent="."]
-position = Vector2( 1135, -374 )
-script = ExtResource( 7 )
+[node name="Platform7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12, -43 )
+scale = Vector2( 3.36, 1 )
 
-[node name="LeakArea" type="Area2D" parent="MemoryLeak"]
-position = Vector2( 887, -163 )
-scale = Vector2( 2.56, 10.7271 )
-
-[node name="Sprite" type="Sprite" parent="MemoryLeak/LeakArea"]
-position = Vector2( -412.5, 56.306 )
-scale = Vector2( 2.38281, 0.593823 )
-texture = ExtResource( 8 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MemoryLeak/LeakArea"]
-position = Vector2( -411.719, 56.539 )
-scale = Vector2( 0.984374, 0.567451 )
-shape = SubResource( 1 )
-
-[node name="PylonArea" type="Area2D" parent="MemoryLeak"]
-position = Vector2( -1, -147 )
-
-[node name="Sprite" type="Sprite" parent="MemoryLeak/PylonArea"]
-position = Vector2( 1, 48 )
-texture = ExtResource( 9 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MemoryLeak/PylonArea"]
-position = Vector2( -2, -3 )
-shape = SubResource( 2 )
-
-[node name="Line2D" type="Line2D" parent="MemoryLeak"]
-points = PoolVector2Array( -2, -158, -80, -121 )
-default_color = Color( 1, 1, 1, 1 )
-texture = ExtResource( 5 )
-texture_mode = 2
-joint_mode = 1
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="GarbageCollector" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1135, 313 )
-
-[node name="Sprite" parent="GarbageCollector" index="0"]
-position = Vector2( 42, -3 )
-
-[node name="LeakCheckpoint" parent="GarbageCollector" index="1"]
-position = Vector2( 41, -97 )
-rotation = 6.2426
-
-[node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 897, -320 )
-rotation = -0.00848891
-
-[node name="LeakCheckpoint" parent="." instance=ExtResource( 6 )]
-position = Vector2( 587, 29 )
-rotation = -1.47792
-
-[node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
-position = Vector2( -69, 332 )
-rotation = -0.010532
-
-[node name="LeakCheckpoint4" parent="." instance=ExtResource( 6 )]
-position = Vector2( -774, 217 )
-rotation = 3.67798
-
-[node name="Portal" parent="." instance=ExtResource( 10 )]
-position = Vector2( 924, 319 )
-next_tscn = "res://assets/levels/level_6.tscn"
+[node name="Portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1171, -346 )
+next_tscn = "res://assets/levels/level_2.tscn"
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, -56 )
-max_ram = 4200
-level_tscn = "res://assets/levels/level_5.tscn"
-
-[connection signal="area_entered" from="MemoryLeak/LeakArea" to="MemoryLeak" method="_on_LeakArea_area_entered"]
-[connection signal="area_exited" from="MemoryLeak/LeakArea" to="MemoryLeak" method="_on_LeakArea_area_exited"]
-[connection signal="area_entered" from="MemoryLeak/PylonArea" to="MemoryLeak" method="_on_PylonArea_area_entered"]
-
-[editable path="GarbageCollector"]
+position = Vector2( -1225, -33 )
+level_tscn = "res://assets/levels/level_1.tscn"

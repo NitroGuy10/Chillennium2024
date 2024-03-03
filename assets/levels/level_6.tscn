@@ -11,7 +11,7 @@
 position = Vector2( 4, -2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 197, 325 )
+position = Vector2( -166, 247 )
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 position = Vector2( -4, 411 )
@@ -34,13 +34,13 @@ position = Vector2( 1107, -521 )
 next_tscn = "res://assets/levels/level_6.tscn"
 
 [node name="Bug" parent="." instance=ExtResource( 4 )]
-position = Vector2( -802, -26 )
+position = Vector2( 75, 316 )
 
 [node name="Bug4" parent="." instance=ExtResource( 4 )]
 position = Vector2( -498, -341 )
 
 [node name="Bug2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -64, 316 )
+position = Vector2( -772, -12 )
 
 [node name="Bug3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 528, 26 )
@@ -50,23 +50,23 @@ position = Vector2( 1086, -421 )
 scale = Vector2( 4.04, 1 )
 
 [node name="Platform11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 639, 19 )
-scale = Vector2( 0.63632, 7.40099 )
+position = Vector2( 635, 120 )
+scale = Vector2( 0.63632, 4.89877 )
 
 [node name="Platform13" parent="." instance=ExtResource( 2 )]
-position = Vector2( -918, 13 )
-scale = Vector2( 0.63632, 7.40099 )
+position = Vector2( -1067, 15 )
+scale = Vector2( -5.12368, 13.121 )
 
 [node name="Platform8" parent="." instance=ExtResource( 2 )]
 position = Vector2( 364, 133 )
 scale = Vector2( 5.5763, 0.907405 )
 
 [node name="Platform14" parent="." instance=ExtResource( 2 )]
-position = Vector2( -607, 85 )
-scale = Vector2( 5.77207, 0.907405 )
+position = Vector2( -711, 88 )
+scale = Vector2( 3.57207, 0.907405 )
 
 [node name="Platform9" parent="." instance=ExtResource( 2 )]
-position = Vector2( -85, -74 )
+position = Vector2( -269, -2 )
 scale = Vector2( 2.1763, 0.907405 )
 
 [node name="Platform15" parent="." instance=ExtResource( 2 )]
@@ -74,17 +74,20 @@ position = Vector2( 322, -245 )
 scale = Vector2( 2.1763, 0.907405 )
 
 [node name="Platform16" parent="." instance=ExtResource( 2 )]
-position = Vector2( -515, -238 )
-scale = Vector2( 7.6374, 0.907405 )
+position = Vector2( -599, -230 )
+scale = Vector2( 4.36991, 0.907405 )
 
 [node name="Platform10" parent="." instance=ExtResource( 2 )]
-position = Vector2( -285, 323 )
+position = Vector2( -176, 326 )
 scale = Vector2( 2.17119, 0.859783 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( 33, -116 )
+position = Vector2( 199, -924 )
 max_ram = 4200
-level_tscn = "res://assets/levels/level_7.tscn"
+level_tscn = "res://assets/levels/level_6.tscn"
 
 [node name="Bug5" parent="." instance=ExtResource( 5 )]
-position = Vector2( -274, 216 )
+position = Vector2( -462, 309 )
+
+[node name="Bug6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 319, -346 )

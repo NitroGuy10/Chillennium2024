@@ -30,10 +30,6 @@ scale = Vector2( 0.966181, 11.64 )
 position = Vector2( 0, -653 )
 scale = Vector2( 26.9662, 1 )
 
-[node name="Platform9" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1091, -361 )
-scale = Vector2( 3.8, 1 )
-
 [node name="Platform7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 424, 70 )
 scale = Vector2( 2.32, 1 )
@@ -68,25 +64,26 @@ position = Vector2( -1030.08, -37.9413 )
 scale = Vector2( 1.32421, 0.276598 )
 
 [node name="CollisionShape2D" parent="MemoryLeak/LeakArea" index="1"]
-position = Vector2( -1005.08, -33.7463 )
+position = Vector2( -1014.84, -38.4074 )
 scale = Vector2( 0.456805, 0.282145 )
 
 [node name="GarbageCollector" parent="." instance=ExtResource( 4 )]
 position = Vector2( -1135, 313 )
 
 [node name="LeakCheckpoint" parent="GarbageCollector" index="1"]
-position = Vector2( -18, -386 )
-rotation = 4.68741
+position = Vector2( -41, -461 )
+rotation = 6.27696
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( -78, -380 )
+frame = 3
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -426, -228 )
+position = Vector2( -421, -284 )
 rotation = -0.00848891
 
 [node name="LeakCheckpoint3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 134, -283 )
+position = Vector2( 136, -345 )
 rotation = -0.00848891
 
 [node name="Portal" parent="." instance=ExtResource( 7 )]
