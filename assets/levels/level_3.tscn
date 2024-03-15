@@ -83,6 +83,7 @@ rotation = 6.27696
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( -62, -431 )
+frame = 1
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -421, -284 )
@@ -333,7 +334,7 @@ texture = ExtResource( 9 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2923, -165 )
-max_ram = 5000
+max_ram = 7000
 background_number = "2"
 level_tscn = "res://assets/levels/level_3.tscn"
 

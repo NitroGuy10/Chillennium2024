@@ -331,7 +331,7 @@ texture = ExtResource( 8 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 417, -951 )
-max_ram = 4700
+max_ram = 5500
 background_number = "2"
 level_tscn = "res://assets/levels/level_4.tscn"
 
