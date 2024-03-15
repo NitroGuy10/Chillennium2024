@@ -19,7 +19,14 @@ func _process(delta):
 		get_parent().get_node("DeathTimer").start()
 		get_parent().get_parent().get_parent().force_hang = false
 
+func _physics_process(delta):
+	$Sprite2.offset.x = (randf() * 8) - 4
+	$Sprite2.offset.y = (randf() * 8) - 4
+	$Sprite3.offset.x = (randf() * 8) - 4
+	$Sprite3.offset.y = (randf() * 8) - 4
+
 
 func _on_Timer_timeout():
 	visible = true
 	ready_to_go = true
+	get_parent().get_parent().get_node("SegFaultSprite").visible = true

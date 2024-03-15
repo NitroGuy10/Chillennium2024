@@ -9,6 +9,12 @@
 
 [node name="level_0" type="Node2D"]
 
+[node name="SegFaultSprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( -14, -807 )
+scale = Vector2( 1.743, 1.64193 )
+texture = ExtResource( 6 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -9, -905 )
 
@@ -18,16 +24,22 @@ background_number = "0"
 level_tscn = "res://assets/levels/level_1.tscn"
 
 [node name="bg1" parent="GameCamera/Background" index="0"]
-frame = 2
+frame = 4
 
-[node name="bg3" parent="GameCamera/Background" index="2"]
-frame = 2
+[node name="bg2" parent="GameCamera/Background" index="1"]
+frame = 0
 
 [node name="Meter" parent="GameCamera" index="3"]
 margin_left = 381.0
 margin_top = -827.0
 margin_right = 381.0
 margin_bottom = -827.0
+
+[node name="BlackScreen" parent="GameCamera" index="6"]
+margin_left = -915.0
+margin_top = -676.0
+margin_right = 1019.0
+margin_bottom = 655.0
 
 [node name="Definition" type="Node2D" parent="GameCamera"]
 visible = false
@@ -40,22 +52,12 @@ wait_time = 6.5
 one_shot = true
 autostart = true
 
-[node name="Sprite" type="Sprite" parent="GameCamera/Definition"]
-visible = false
-scale = Vector2( 0.778306, 0.384871 )
-texture = ExtResource( 6 )
-
 [node name="Sprite2" type="Sprite" parent="GameCamera/Definition"]
 position = Vector2( -5.8328, -19.7602 )
 scale = Vector2( 0.639427, 0.322413 )
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="GameCamera/Definition"]
-position = Vector2( -54.4949, 66.5059 )
-scale = Vector2( 0.394996, 0.227333 )
-texture = ExtResource( 5 )
-
-[node name="Sprite4" type="Sprite" parent="GameCamera/Definition"]
 position = Vector2( -54.4949, 66.5059 )
 scale = Vector2( 0.394996, 0.227333 )
 texture = ExtResource( 5 )

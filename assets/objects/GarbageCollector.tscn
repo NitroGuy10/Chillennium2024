@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(1).png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/npcs/garbage disposal/Untitled_Artwork(2).png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/npcs/garbage text.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/pylon/End Pole.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/pylon/End Pole.PNG" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

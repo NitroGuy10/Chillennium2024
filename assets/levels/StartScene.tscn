@@ -29,8 +29,8 @@ scale = Vector2( 13.73, 8.98 )
 texture = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 652.892, 406.5 )
-scale = Vector2( 0.576676, 0.576676 )
+position = Vector2( 649.706, 425.25 )
+scale = Vector2( 1.04612, 1.04612 )
 frames = SubResource( 1 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

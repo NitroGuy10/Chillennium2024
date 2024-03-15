@@ -35,5 +35,5 @@ texture = ExtResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 652.892, 406.5 )
-scale = Vector2( 0.576676, 0.576676 )
+scale = Vector2( 1.05668, 1.05668 )
 frames = SubResource( 1 )
