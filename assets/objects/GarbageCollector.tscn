@@ -36,7 +36,7 @@ scale = Vector2( 0.84, 0.56 )
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="LeakCheckpoint/PylonArea" index="2"]
-position = Vector2( -1, 6 )
+position = Vector2( -1, 42.75 )
 
 [node name="HowdySprite" type="Sprite" parent="."]
 visible = false
@@ -49,7 +49,7 @@ position = Vector2( -2, -2 )
 scale = Vector2( 0.563239, 0.475966 )
 z_index = -5
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [editable path="LeakCheckpoint"]

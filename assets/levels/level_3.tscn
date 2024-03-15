@@ -83,7 +83,6 @@ rotation = 6.27696
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( -62, -431 )
-frame = 3
 
 [node name="LeakCheckpoint2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -421, -284 )
@@ -94,21 +93,49 @@ position = Vector2( 136, -345 )
 rotation = -0.00848891
 
 [node name="Label" type="Label" parent="."]
-margin_left = -969.0
-margin_top = -283.0
-margin_right = -815.0
-margin_bottom = -269.0
+margin_left = -980.0
+margin_top = -284.0
+margin_right = -758.0
+margin_bottom = -219.0
 rect_scale = Vector2( 1.90964, 2.2 )
-text = "Hang through live wires!"
+text = "The farther you are 
+from the last 
+checkpoint or leak, 
+the more your RAM drains!"
 align = 1
 
 [node name="Label2" type="Label" parent="."]
-margin_left = -250.0
-margin_top = -22.0
-margin_right = -8.0
-margin_bottom = -8.0
+margin_left = -647.0
+margin_top = 53.0
+margin_right = -405.0
+margin_bottom = 84.0
 rect_scale = Vector2( 1.92, 2.25901 )
-text = "Use pointers to drop your RAM usage!"
+text = "Use checkpoints to reset
+ the RAM drainage rate"
+align = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 348.0
+margin_top = -448.0
+margin_right = 590.0
+margin_bottom = -383.0
+rect_scale = Vector2( 1.92, 2.37901 )
+text = "Once wires are connected, you will 
+glitch out if touched! 
+Freeze through the wires
+to avoid them!"
+align = 1
+
+[node name="Label4" type="Label" parent="."]
+margin_left = -417.0
+margin_top = -488.0
+margin_right = -175.0
+margin_bottom = -423.0
+rect_scale = Vector2( 1.92, 2.37901 )
+text = "Hint! Think about
+when you are freezing!
+Freeze at your max velocity
+for maximum movement!"
 align = 1
 
 [node name="Img0112" type="Sprite" parent="."]
@@ -306,7 +333,7 @@ texture = ExtResource( 9 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2923, -165 )
-max_ram = 3000
+max_ram = 5000
 background_number = "2"
 level_tscn = "res://assets/levels/level_3.tscn"
 

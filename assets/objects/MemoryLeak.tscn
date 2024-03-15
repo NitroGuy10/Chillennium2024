@@ -23,7 +23,7 @@ frame_2/delay_sec = 0.0
 extents = Vector2( 113.477, 51.1236 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 27, 25 )
+extents = Vector2( 27, 89 )
 
 [node name="MemoryLeak" type="Node2D"]
 script = ExtResource( 3 )
@@ -54,7 +54,7 @@ position = Vector2( 1, 48 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PylonArea"]
-position = Vector2( -2, -3 )
+position = Vector2( 6, 61 )
 shape = SubResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="PylonArea"]
@@ -64,6 +64,7 @@ texture = ExtResource( 5 )
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2( -2, -1 )
+z_index = -20
 points = PoolVector2Array( 10, -165, -80, -121 )
 width = 40.0
 default_color = Color( 1, 1, 1, 1 )

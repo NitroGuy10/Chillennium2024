@@ -53,13 +53,24 @@ position = Vector2( 1171, -346 )
 next_tscn = "res://assets/levels/level_2.tscn"
 
 [node name="Label" type="Label" parent="."]
-margin_left = -627.0
-margin_top = -235.0
-margin_right = -533.0
-margin_bottom = -221.0
-rect_scale = Vector2( 5.08772, 5.30363 )
-text = "Space to Hang
-the program!"
+margin_left = -974.0
+margin_top = -89.0
+margin_right = -847.0
+margin_bottom = -41.0
+rect_scale = Vector2( 2.88772, 2.74363 )
+text = "Space to freeze the 
+program and 
+your velocity!"
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 107.0
+margin_top = -359.0
+margin_right = 234.0
+margin_bottom = -311.0
+rect_scale = Vector2( 2.88772, 2.74363 )
+text = "Reach the portal 
+to advance!"
 align = 1
 
 [node name="Img0111" type="Sprite" parent="."]

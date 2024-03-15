@@ -117,7 +117,6 @@ position = Vector2( 2210, -917 )
 
 [node name="CollisionShape2D" parent="MemoryLeak/LeakArea" index="1"]
 position = Vector2( -61.9141, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="GarbageCollector" parent="." instance=ExtResource( 7 )]
 position = Vector2( 90, -385 )
@@ -170,12 +169,6 @@ texture = ExtResource( 11 )
 position = Vector2( 1354, -122 )
 scale = Vector2( 1.01236, 12.68 )
 texture = ExtResource( 11 )
-
-[node name="GameCamera" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1007, 265 )
-max_ram = 4200
-background_number = "4"
-level_tscn = "res://assets/levels/level_7.tscn"
 
 [node name="Pinkone" type="Sprite" parent="."]
 position = Vector2( -706.25, 293.75 )
@@ -317,5 +310,11 @@ texture = ExtResource( 12 )
 position = Vector2( -939, -138 )
 scale = Vector2( 0.203489, 0.181894 )
 texture = ExtResource( 12 )
+
+[node name="GameCamera" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1007, 265 )
+max_ram = 5000
+background_number = "4"
+level_tscn = "res://assets/levels/level_7.tscn"
 
 [editable path="MemoryLeak"]

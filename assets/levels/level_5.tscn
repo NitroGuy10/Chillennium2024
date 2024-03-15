@@ -69,7 +69,7 @@ position = Vector2( 54, -10 )
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
 position = Vector2( 25, 17 )
 z_index = 1
-frame = 2
+frame = 3
 
 [node name="Pinkone" type="Sprite" parent="GarbageCollector"]
 position = Vector2( 505, -102 )
@@ -286,7 +286,7 @@ texture = ExtResource( 9 )
 
 [node name="GameCamera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 877, -1010 )
-max_ram = 7000
+max_ram = 7500
 background_number = "3"
 level_tscn = "res://assets/levels/level_5.tscn"
 
