@@ -10,9 +10,12 @@ config_version=4
 
 [application]
 
-config/name="Chillennium2024"
+config/name="Buggin' Out"
 run/main_scene="res://assets/objects/Game.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://assets/sprites/npcs/monster/bug_smol.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://assets/sprites/titlescreen/smol_square.png"
 
 [display]
 
