@@ -16,6 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if ready_to_go and Input.is_action_just_pressed("ui_select"):
+		$BlinkTimer.start()
 		get_parent().get_node("DeathTimer").start()
 		get_parent().get_parent().get_parent().force_hang = false
 
@@ -30,3 +31,7 @@ func _on_Timer_timeout():
 	visible = true
 	ready_to_go = true
 	get_parent().get_parent().get_node("SegFaultSprite").visible = true
+
+
+func _on_BlinkTimer_timeout():
+	visible = !visible
