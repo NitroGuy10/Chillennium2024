@@ -29,6 +29,9 @@ frame = 7
 [node name="bg2" parent="GameCamera/Background" index="1"]
 frame = 0
 
+[node name="bg3" parent="GameCamera/Background" index="2"]
+frame = 2
+
 [node name="Meter" parent="GameCamera" index="3"]
 margin_left = 381.0
 margin_top = -827.0

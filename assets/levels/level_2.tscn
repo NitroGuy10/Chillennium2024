@@ -68,7 +68,7 @@ position = Vector2( -315, -16 )
 introduceSelf = true
 
 [node name="AnimatedSprite" parent="GarbageCollector" index="3"]
-frame = 1
+frame = 3
 
 [node name="Label" type="Label" parent="."]
 margin_left = -976.0
