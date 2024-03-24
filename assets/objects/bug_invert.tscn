@@ -15,7 +15,6 @@ animations = [ {
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
-load_path = "res://.import/nav.png-d5a3308d28ea42ea7b3f9a33f583f728.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 17.5, 35 )

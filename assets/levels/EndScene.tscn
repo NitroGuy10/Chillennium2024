@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/sprites/end scene/IMG_0144.PNG" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/end scene/IMG_0145.PNG" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/sprites/end scene/IMG_0155.PNG" type="Texture" id=14]
 [ext_resource path="res://assets/sprites/end scene/IMG_0156.PNG" type="Texture" id=15]
 [ext_resource path="res://assets/levels/EndScene.gd" type="Script" id=16]
+[ext_resource path="res://assets/sprites/credits.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -37,3 +38,15 @@ texture = ExtResource( 11 )
 position = Vector2( 652.892, 406.5 )
 scale = Vector2( 1.05668, 1.05668 )
 frames = SubResource( 1 )
+
+[node name="CreditsSprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 650, 400 )
+texture = ExtResource( 17 )
+
+[node name="CreditsDelayTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="CreditsDelayTimer" to="." method="_on_CreditsDelayTimer_timeout"]

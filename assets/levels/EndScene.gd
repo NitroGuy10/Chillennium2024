@@ -15,3 +15,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_AnimatedSprite_animation_finished():
+	$CreditsDelayTimer.start()
+
+func _on_CreditsDelayTimer_timeout():
+	$CreditsSprite.visible = true

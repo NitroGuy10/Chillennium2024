@@ -15,7 +15,6 @@ animations = [ {
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
-load_path = "res://.import/nav.png-d5a3308d28ea42ea7b3f9a33f583f728.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 17.5, 35 )
@@ -32,6 +31,7 @@ script = ExtResource( 2 )
 position = Vector2( 3, 3 )
 scale = Vector2( 0.07, 0.07 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Sprite" type="Sprite" parent="BKB"]
